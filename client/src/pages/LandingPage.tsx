@@ -415,7 +415,7 @@ export default function LandingPage() {
 
             <Button asChild variant="outline" data-testid="link-readydesk">
               <a href="https://readydeskservices.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-[0.15em] inline-flex items-center gap-2">
-                Explore All Services <ExternalLink className="w-4 h-4" />
+                Explore Legal Service <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
           </motion.div>
