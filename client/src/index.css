@@ -324,4 +324,17 @@
     background-clip: text;
     animation: shimmer 4s linear infinite;
   }
+
+  .shimmer-line {
+    background: linear-gradient(
+      90deg,
+      #c27a4a 0%,
+      #d4925e 25%,
+      #e8b88a 50%,
+      #d4925e 75%,
+      #c27a4a 100%
+    );
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+  }
 }

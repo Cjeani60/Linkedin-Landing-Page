@@ -268,9 +268,9 @@ export default function LandingPage() {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp}>
               <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#c27a4a] block mb-4">The Difference</span>
               <h2 className="text-4xl md:text-5xl font-serif-display font-bold mb-6 leading-[1.1]">
-                Other agencies sell you a template.<br/><span className="italic text-[#c27a4a]">We build you a brand.</span>
+                Other agencies sell you a template.<br/><span className="italic shimmer-text">We build you a brand.</span>
               </h2>
-              <div className="w-16 h-[3px] bg-gradient-to-r from-[#c27a4a] to-[#5c3d2e] mb-8 rounded-full"></div>
+              <div className="w-16 h-[3px] shimmer-line mb-8 rounded-full"></div>
               <p className="text-white/50 text-lg leading-relaxed mb-10">
                 Fifteen years of working inside law firms taught us something most designers never learn: details aren't just important &mdash; they're everything. That discipline shows in every pixel, every interaction, and every line of code we deliver.
               </p>
