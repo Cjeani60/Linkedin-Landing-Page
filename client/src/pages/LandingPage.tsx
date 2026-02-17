@@ -431,10 +431,15 @@ export default function LandingPage() {
             <FloatingOrb className="absolute top-0 right-0 w-64 h-64 bg-[#c27a4a]/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" delay={6} />
             <div className="relative z-10">
               <div className="flex justify-center mb-8">
-                <img src={logoImg} alt="RDS" className="w-44 h-44 object-contain opacity-80" />
+                <div className="relative flex justify-center items-center">
+                  <div className="absolute w-[220px] h-[220px] rounded-full border border-[#c27a4a]/15 animate-pulse-glow"></div>
+                  <div className="absolute w-[185px] h-[185px] rounded-full border border-white/10 animate-float-slow"></div>
+                  <div className="absolute w-[150px] h-[150px] rounded-full bg-gradient-to-br from-[#c27a4a]/10 to-[#5c3d2e]/10 animate-float"></div>
+                  <img src={logoImg} alt="RDS" className="relative w-40 h-40 object-contain drop-shadow-[0_0_60px_rgba(194,122,74,0.4)]" />
+                </div>
               </div>
               <blockquote className="font-serif-display text-2xl md:text-3xl leading-relaxed mb-8 text-center italic text-white">
-                "The details aren't the details. They make the design."
+                "Three services, one team &mdash; customizable packages built to fit every need."
               </blockquote>
               <div className="text-sm font-bold tracking-[0.15em] uppercase text-[#c27a4a] text-center">Ready Desk Services, LLC</div>
 
