@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Globe, Palette, Smartphone, Zap, CheckCircle2, ArrowRight, ExternalLink, Monitor, Code, Layers, Sparkles, Shield, Clock, MousePointer, Eye, TrendingUp } from "lucide-react";
+import { Globe, Palette, Zap, CheckCircle2, ArrowRight, ExternalLink, Monitor, Code, Layers, Sparkles, Shield, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useForm } from "react-hook-form";
@@ -11,6 +11,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import logoImg from "@assets/Logo_1771363129441.png";
+import cardVisualImg from "@/assets/images/card-visual-storytelling.jpg";
+import cardDeviceImg from "@/assets/images/card-device-perfect.jpg";
+import cardArchImg from "@/assets/images/card-modern-architecture.jpg";
+import cardConvertImg from "@/assets/images/card-conversion-focused.jpg";
+import cardRapidImg from "@/assets/images/card-rapid-delivery.jpg";
+import cardGrowthImg from "@/assets/images/card-growth-ready.jpg";
 import { useRef } from "react";
 
 const fadeUp = {
@@ -194,37 +200,37 @@ export default function LandingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Eye className="w-8 h-8" />,
+                img: cardVisualImg,
                 title: "Visual Storytelling",
                 desc: "We don't just arrange pixels. We tell your brand's story through design that pulls people in and doesn't let go.",
                 tags: ["Brand Narrative", "Visual Impact", "Emotion"]
               },
               {
-                icon: <Smartphone className="w-8 h-8" />,
+                img: cardDeviceImg,
                 title: "Device-Perfect",
                 desc: "From a 6-inch phone screen to a 34-inch ultrawide, your site looks flawless everywhere your audience lives.",
                 tags: ["Responsive", "Retina-Ready", "Lightning Fast"]
               },
               {
-                icon: <Code className="w-8 h-8" />,
+                img: cardArchImg,
                 title: "Modern Architecture",
                 desc: "No clunky page builders. We write real code that loads fast, ranks high, and never fights against you.",
                 tags: ["React", "Performance", "SEO Native"]
               },
               {
-                icon: <MousePointer className="w-8 h-8" />,
+                img: cardConvertImg,
                 title: "Conversion-Focused",
                 desc: "Beautiful design means nothing if it doesn't work. Every button, headline, and layout is engineered to drive action.",
                 tags: ["CRO", "A/B Tested", "Data-Driven"]
               },
               {
-                icon: <Zap className="w-8 h-8" />,
+                img: cardRapidImg,
                 title: "Rapid Delivery",
                 desc: "Ideas move fast. We move faster. From first call to live site in weeks, not months &mdash; without cutting corners.",
                 tags: ["Agile", "Milestone-Based", "On Time"]
               },
               {
-                icon: <TrendingUp className="w-8 h-8" />,
+                img: cardGrowthImg,
                 title: "Growth-Ready",
                 desc: "Launch lean today, scale tomorrow. Our builds are designed to evolve as your ambitions do &mdash; no rebuilds required.",
                 tags: ["Scalable", "Modular", "Future-Proof"]
@@ -237,20 +243,22 @@ export default function LandingPage() {
                 viewport={{ once: true }}
                 custom={i}
                 variants={scaleIn}
-                className="relative p-8 rounded-md bg-white border border-border hover-elevate"
+                className="relative rounded-md bg-white border border-border hover-elevate overflow-visible"
                 data-testid={`card-service-${i}`}
               >
-                <div className="w-14 h-14 rounded-md bg-[#c27a4a]/10 flex items-center justify-center text-[#c27a4a] mb-6">
-                  {card.icon}
+                <div className="h-48 overflow-hidden rounded-t-md">
+                  <img src={card.img} alt={card.title} className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-xl font-serif-display font-bold text-espresso mb-3">{card.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: card.desc }}></p>
-                <div className="flex flex-wrap gap-2">
-                  {card.tags.map((tag) => (
-                    <span key={tag} className="px-3 py-1 bg-[#c27a4a]/5 text-[#5c3d2e] text-[10px] uppercase tracking-[0.1em] font-bold rounded-sm">
-                      {tag}
-                    </span>
-                  ))}
+                <div className="p-8">
+                  <h3 className="text-xl font-serif-display font-bold text-espresso mb-3">{card.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: card.desc }}></p>
+                  <div className="flex flex-wrap gap-2">
+                    {card.tags.map((tag) => (
+                      <span key={tag} className="px-3 py-1 bg-[#c27a4a]/5 text-[#5c3d2e] text-[10px] uppercase tracking-[0.1em] font-bold rounded-sm">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             ))}
