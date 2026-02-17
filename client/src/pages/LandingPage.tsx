@@ -94,7 +94,7 @@ export default function LandingPage() {
 
               <motion.p
                 initial="hidden" animate="visible" custom={3} variants={fadeUp}
-                className="text-lg md:text-xl text-white leading-relaxed max-w-xl mb-12 font-light"
+                className="text-lg md:text-xl text-white leading-relaxed max-w-xl mb-12"
               >
                 From concept to click, we transform ideas into digital realities that captivate your audience and grow your business &mdash; with the precision of a legal mind and the eye of a designer.
               </motion.p>
@@ -144,7 +144,7 @@ export default function LandingPage() {
                   data-testid={`stat-item-${i}`}
                 >
                   <div className="text-3xl font-serif-display font-bold text-[#c27a4a] mb-1">{stat.val}</div>
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-white/80">{stat.label}</div>
+                  <div className="text-[10px] uppercase tracking-[0.2em] text-white">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -469,7 +469,7 @@ export default function LandingPage() {
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif-display font-bold mb-8 leading-[1.1]">
                   The best time to launch was yesterday.<br/><span className="italic shimmer-text">The next best time is now.</span>
                 </h2>
-                <p className="text-white text-lg font-light leading-relaxed max-w-2xl mb-10">
+                <p className="text-white text-lg leading-relaxed max-w-2xl mb-10">
                   Stop blending in. Let's create a digital presence that makes people stop scrolling and start paying attention.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
