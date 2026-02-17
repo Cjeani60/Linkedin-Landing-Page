@@ -94,7 +94,7 @@ export default function LandingPage() {
 
               <motion.p
                 initial="hidden" animate="visible" custom={3} variants={fadeUp}
-                className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl mb-12 font-light"
+                className="text-lg md:text-xl text-white/95 leading-relaxed max-w-xl mb-12 font-light"
               >
                 From concept to click, we transform ideas into digital realities that captivate your audience and grow your business &mdash; with the precision of a legal mind and the eye of a designer.
               </motion.p>
@@ -103,7 +103,7 @@ export default function LandingPage() {
                 <Button asChild className="bg-[#c27a4a] text-white border-[#c27a4a]" data-testid="button-hero-getstarted">
                   <a href="https://readydeskservices.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-[0.15em]">Get Started Today</a>
                 </Button>
-                <Button asChild variant="outline" className="border-white/20 text-white/70 backdrop-blur-sm bg-white/5" data-testid="button-hero-learnmore">
+                <Button asChild variant="outline" className="border-white/20 text-white/90 backdrop-blur-sm bg-white/5" data-testid="button-hero-learnmore">
                   <a href="#showcase" className="text-xs font-bold uppercase tracking-[0.15em] inline-flex items-center gap-2">See What We Do <ArrowRight className="w-4 h-4" /></a>
                 </Button>
               </motion.div>
@@ -144,7 +144,7 @@ export default function LandingPage() {
                   data-testid={`stat-item-${i}`}
                 >
                   <div className="text-3xl font-serif-display font-bold text-[#c27a4a] mb-1">{stat.val}</div>
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-white/60">{stat.label}</div>
+                  <div className="text-[10px] uppercase tracking-[0.2em] text-white/80">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -165,11 +165,11 @@ export default function LandingPage() {
             <span className="text-xs font-bold uppercase tracking-[0.15em] text-white">Web Design & Development</span>
           </div>
           <div className="flex items-center gap-3">
-            <Shield className="w-4 h-4 text-white/80" />
+            <Shield className="w-4 h-4 text-white/95" />
             <span className="text-xs font-bold uppercase tracking-[0.15em] text-white/90">Paralegal Services</span>
           </div>
           <div className="flex items-center gap-3">
-            <Clock className="w-4 h-4 text-white/80" />
+            <Clock className="w-4 h-4 text-white/95" />
             <span className="text-xs font-bold uppercase tracking-[0.15em] text-white/90">Transcription Services</span>
           </div>
         </motion.div>
@@ -271,7 +271,7 @@ export default function LandingPage() {
                 Other agencies sell you a template.<br/><span className="italic shimmer-text">We build you a brand.</span>
               </h2>
               <div className="w-16 h-[3px] shimmer-line mb-8 rounded-full"></div>
-              <p className="text-white/80 text-lg leading-relaxed mb-10">
+              <p className="text-white/95 text-lg leading-relaxed mb-10">
                 Fifteen years of working inside law firms taught us something most designers never learn: details aren't just important &mdash; they're everything. That discipline shows in every pixel, every interaction, and every line of code we deliver.
               </p>
 
@@ -293,7 +293,7 @@ export default function LandingPage() {
                     <div className="w-6 h-6 rounded-full bg-[#c27a4a]/20 flex items-center justify-center shrink-0 mt-0.5">
                       <CheckCircle2 className="w-3.5 h-3.5 text-[#c27a4a]" />
                     </div>
-                    <p className="text-white/80 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: text }}></p>
+                    <p className="text-white/95 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: text }}></p>
                   </motion.div>
                 ))}
               </div>
@@ -321,7 +321,7 @@ export default function LandingPage() {
                         <h3 className="font-serif-display text-xl font-bold text-white">{tier.title}</h3>
                         <span className="text-[10px] font-bold uppercase tracking-wider text-[#c27a4a] whitespace-nowrap">{tier.price}</span>
                       </div>
-                      <p className="text-white/75 text-sm leading-relaxed">{tier.desc}</p>
+                      <p className="text-white/90 text-sm leading-relaxed">{tier.desc}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -425,7 +425,7 @@ export default function LandingPage() {
               <div className="flex justify-center mb-8">
                 <img src={logoImg} alt="RDS" className="w-44 h-44 object-contain opacity-80" />
               </div>
-              <blockquote className="font-serif-display text-2xl md:text-3xl leading-relaxed mb-8 text-center italic text-white/80">
+              <blockquote className="font-serif-display text-2xl md:text-3xl leading-relaxed mb-8 text-center italic text-white/95">
                 "The details aren't the details. They make the design."
               </blockquote>
               <div className="text-sm font-bold tracking-[0.15em] uppercase text-[#c27a4a] text-center">Ready Desk Services, LLC</div>
@@ -445,7 +445,7 @@ export default function LandingPage() {
                     className="text-center"
                   >
                     <div className="text-2xl font-serif-display font-bold text-[#c27a4a] mb-1">{s.val}</div>
-                    <div className="text-[9px] uppercase tracking-wider text-white/60">{s.label}</div>
+                    <div className="text-[9px] uppercase tracking-wider text-white/80">{s.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -469,14 +469,14 @@ export default function LandingPage() {
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif-display font-bold mb-8 leading-[1.1]">
                   The best time to launch was yesterday.<br/><span className="italic shimmer-text">The next best time is now.</span>
                 </h2>
-                <p className="text-white/80 text-lg font-light leading-relaxed max-w-2xl mb-10">
+                <p className="text-white/95 text-lg font-light leading-relaxed max-w-2xl mb-10">
                   Stop blending in. Let's create a digital presence that makes people stop scrolling and start paying attention.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <Button asChild className="bg-[#c27a4a] text-white border-[#c27a4a]" data-testid="button-cta-contact">
                     <a href="https://readydeskservices.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-[0.15em]">Launch Your Project</a>
                   </Button>
-                  <Button asChild variant="outline" className="border-white/20 text-white/70 backdrop-blur-sm bg-white/5" data-testid="button-cta-website">
+                  <Button asChild variant="outline" className="border-white/20 text-white/90 backdrop-blur-sm bg-white/5" data-testid="button-cta-website">
                     <a href="#contact" className="text-xs font-bold uppercase tracking-[0.15em] inline-flex items-center gap-2">
                       Send Us a Message <ArrowRight className="w-4 h-4" />
                     </a>
