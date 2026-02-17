@@ -110,7 +110,7 @@ export default function LandingPage() {
                   <a href="https://readydeskservices.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-[0.15em]">Legal Services</a>
                 </Button>
                 <Button asChild variant="outline" className="border-white/20 text-white backdrop-blur-sm bg-white/5" data-testid="button-hero-learnmore">
-                  <a href="#showcase" className="text-xs font-bold uppercase tracking-[0.15em] inline-flex items-center gap-2">See What We Do <ArrowRight className="w-4 h-4" /></a>
+                  <a href="#showcase" className="text-xs font-bold uppercase tracking-[0.15em] inline-flex items-center gap-2">Web Design and Development <ArrowRight className="w-4 h-4" /></a>
                 </Button>
               </motion.div>
             </div>
