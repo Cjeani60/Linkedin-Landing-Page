@@ -94,7 +94,7 @@ export default function LandingPage() {
 
               <motion.p
                 initial="hidden" animate="visible" custom={3} variants={fadeUp}
-                className="text-lg md:text-xl text-white leading-relaxed max-w-xl mb-12"
+                className="text-xl md:text-2xl text-white leading-relaxed max-w-xl mb-12 font-medium"
               >
                 From concept to click, we transform ideas into digital realities that captivate your audience and grow your business &mdash; with the precision of a legal mind and the eye of a designer.
               </motion.p>
@@ -144,7 +144,7 @@ export default function LandingPage() {
                   data-testid={`stat-item-${i}`}
                 >
                   <div className="text-3xl font-serif-display font-bold text-[#c27a4a] mb-1">{stat.val}</div>
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-white">{stat.label}</div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-white font-semibold">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
