@@ -6,8 +6,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-10">
           <div className="flex items-center gap-4">
-            <img src={logoImg} alt="RDS Logo" className="w-12 h-12 object-contain" data-testid="img-footer-logo" />
-            <span className="font-serif-display text-xl tracking-wide text-white/90 whitespace-nowrap">Ready Desk Services, LLC</span>
+            <img src={logoImg} alt="RDS Logo" className="w-[80px] h-[80px] object-contain" data-testid="img-footer-logo" />
+            <span className="font-serif-display font-semibold text-[26px] leading-tight text-white whitespace-nowrap">Ready Desk Services, LLC</span>
           </div>
 
           <div className="flex gap-8 flex-wrap">
