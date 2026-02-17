@@ -126,7 +126,7 @@ export default function LandingPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4, duration: 0.8 }}
-            className="mt-24 pt-10 border-t border-white/5"
+            className="mt-24 bg-[#2e1e14]/80 backdrop-blur-sm rounded-md p-10 border border-white/10"
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {[
@@ -143,7 +143,7 @@ export default function LandingPage() {
                   className="text-center"
                   data-testid={`stat-item-${i}`}
                 >
-                  <div className="text-3xl font-serif-display font-bold text-[#c27a4a] mb-1">{stat.val}</div>
+                  <div className="text-4xl font-serif-display font-bold text-[#e8a76e] mb-2">{stat.val}</div>
                   <div className="text-xs uppercase tracking-[0.2em] text-white font-semibold">{stat.label}</div>
                 </motion.div>
               ))}
