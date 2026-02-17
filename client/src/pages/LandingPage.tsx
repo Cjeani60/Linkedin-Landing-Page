@@ -90,7 +90,7 @@ export default function LandingPage() {
                 <span className="shimmer-text">We craft experiences.</span>
               </motion.h1>
 
-              <motion.div initial="hidden" animate="visible" custom={2} variants={fadeUp} className="w-24 h-[3px] bg-gradient-to-r from-[#c27a4a] to-[#5c3d2e] mb-8 rounded-full"></motion.div>
+              <motion.div initial="hidden" animate="visible" custom={2} variants={fadeUp} className="w-24 h-[3px] shimmer-line mb-8 rounded-full"></motion.div>
 
               <motion.p
                 initial="hidden" animate="visible" custom={3} variants={fadeUp}
