@@ -62,7 +62,7 @@ export default function LandingPage() {
       <Navigation />
 
       {/* ═══ HERO ════════════════════════════════════════════════ */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#6b4a35] via-[#7d5940] to-[#8c6849]" data-testid="section-hero">
+      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#3b2318] via-[#4a2e1c] to-[#5c3d2e]" data-testid="section-hero">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_40%,rgba(194,122,74,0.2),transparent)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_60%,rgba(194,122,74,0.15),transparent)]"></div>
 
