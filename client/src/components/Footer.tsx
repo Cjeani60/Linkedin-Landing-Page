@@ -5,9 +5,9 @@ export default function Footer() {
     <footer className="bg-[#4a3328] text-white py-16 px-6 md:px-12 lg:px-20 border-t border-[#c27a4a]/10">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-10">
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-0">
             <img src={logoImg} alt="RDS Logo" className="w-[120px] h-[120px] object-contain" data-testid="img-footer-logo" />
-            <span className="font-serif-display font-semibold text-[26px] leading-tight text-white whitespace-nowrap">Ready Desk Services, LLC</span>
+            <span className="font-serif-display font-semibold text-[26px] leading-tight text-white whitespace-nowrap -ml-2">Ready Desk Services, LLC</span>
           </div>
 
           <div className="flex gap-8 flex-wrap">
