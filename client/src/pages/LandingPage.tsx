@@ -101,7 +101,7 @@ export default function LandingPage() {
 
               <motion.div initial="hidden" animate="visible" custom={4} variants={fadeUp} className="flex flex-col sm:flex-row gap-4">
                 <Button asChild className="bg-[#c27a4a] text-white border-[#c27a4a]" data-testid="button-hero-getstarted">
-                  <a href="https://readydesk.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-[0.15em]">Get Started Today</a>
+                  <a href="https://readydeskservices.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-[0.15em]">Get Started Today</a>
                 </Button>
                 <Button asChild variant="outline" className="border-white/20 text-white/70 backdrop-blur-sm bg-white/5" data-testid="button-hero-learnmore">
                   <a href="#showcase" className="text-xs font-bold uppercase tracking-[0.15em] inline-flex items-center gap-2">See What We Do <ArrowRight className="w-4 h-4" /></a>
@@ -406,7 +406,7 @@ export default function LandingPage() {
             </div>
 
             <Button asChild variant="outline" data-testid="link-readydesk">
-              <a href="https://readydesk.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-[0.15em] inline-flex items-center gap-2">
+              <a href="https://readydeskservices.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-[0.15em] inline-flex items-center gap-2">
                 Explore All Services <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
@@ -474,7 +474,7 @@ export default function LandingPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <Button asChild className="bg-[#c27a4a] text-white border-[#c27a4a]" data-testid="button-cta-contact">
-                    <a href="https://readydesk.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-[0.15em]">Launch Your Project</a>
+                    <a href="https://readydeskservices.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-[0.15em]">Launch Your Project</a>
                   </Button>
                   <Button asChild variant="outline" className="border-white/20 text-white/70 backdrop-blur-sm bg-white/5" data-testid="button-cta-website">
                     <a href="#contact" className="text-xs font-bold uppercase tracking-[0.15em] inline-flex items-center gap-2">

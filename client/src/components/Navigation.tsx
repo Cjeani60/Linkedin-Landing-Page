@@ -24,7 +24,7 @@ export default function Navigation() {
         <button onClick={() => scrollTo('process')} className="text-xs font-bold tracking-[0.15em] uppercase text-white/60 transition-colors" data-testid="button-nav-process">
           Process
         </button>
-        <a href="https://readydesk.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold tracking-[0.15em] uppercase text-white/60 transition-colors" data-testid="link-nav-services">
+        <a href="https://readydeskservices.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold tracking-[0.15em] uppercase text-white/60 transition-colors" data-testid="link-nav-services">
           Our Services
         </a>
         <Button variant="outline" size="sm" onClick={() => scrollTo('contact')} className="text-xs font-bold tracking-[0.15em] uppercase text-[#c27a4a] border-[#c27a4a]/40" data-testid="button-nav-contact">

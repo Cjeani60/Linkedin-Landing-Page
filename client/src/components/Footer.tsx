@@ -11,8 +11,8 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-8 flex-wrap">
-            <a href="https://readydesk.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold tracking-[0.15em] uppercase text-[#c27a4a] transition-colors" data-testid="link-footer-website">
-              ReadyDesk.com
+            <a href="https://readydeskservices.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold tracking-[0.15em] uppercase text-[#c27a4a] transition-colors" data-testid="link-footer-website">
+              ReadyDeskServices.com
             </a>
           </div>
         </div>
