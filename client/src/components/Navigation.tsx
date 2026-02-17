@@ -9,9 +9,9 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-[9999] px-6 py-4 md:px-12 flex justify-between items-center gap-4 bg-[#1a1410]/95 backdrop-blur-md border-b border-white/5" data-testid="navigation">
+    <nav className="fixed top-0 left-0 w-full z-[9999] px-6 py-3 md:px-12 flex justify-between items-center gap-4 bg-[#3b2318]/95 backdrop-blur-md border-b border-[#c27a4a]/10" data-testid="navigation">
       <Link href="/" className="group flex items-center gap-3 no-underline cursor-pointer" data-testid="link-home">
-        <img src={logoImg} alt="RDS Logo" className="w-14 h-14 object-contain" data-testid="img-logo" />
+        <img src={logoImg} alt="RDS Logo" className="w-20 h-20 object-contain" data-testid="img-logo" />
         <span className="font-serif-display font-bold text-lg leading-tight text-white tracking-wide whitespace-nowrap">
           Ready Desk Services, LLC
         </span>

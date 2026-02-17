@@ -11,7 +11,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import logoImg from "@assets/Logo_1771363129441.png";
-import officeImg from "@assets/image_1771363205037.png";
 import { useRef } from "react";
 
 const fadeUp = {
@@ -63,10 +62,9 @@ export default function LandingPage() {
       <Navigation />
 
       {/* ═══ HERO ════════════════════════════════════════════════ */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden" data-testid="section-hero">
-        <motion.img style={{ y: heroY }} src={officeImg} alt="" className="absolute inset-0 w-full h-full object-cover scale-110" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1a1410]/97 via-[#1a1410]/90 to-[#1a1410]/50"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a1410] via-transparent to-[#1a1410]/30"></div>
+      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#3b2318] via-[#4a2e1c] to-[#5c3d2e]" data-testid="section-hero">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_40%,rgba(194,122,74,0.15),transparent)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_60%,rgba(92,61,46,0.2),transparent)]"></div>
 
         <FloatingOrb className="absolute top-[15%] left-[5%] w-[350px] h-[350px] rounded-full bg-[#c27a4a]/15 blur-[100px]" delay={0} />
         <FloatingOrb className="absolute bottom-[10%] right-[10%] w-[280px] h-[280px] rounded-full bg-[#5c3d2e]/20 blur-[90px]" delay={3} />
@@ -457,9 +455,8 @@ export default function LandingPage() {
       </section>
 
       {/* ═══ CTA BANNER ═══════════════════════════════════════════ */}
-      <section className="relative text-white section-padding overflow-hidden" data-testid="section-cta">
-        <img src={officeImg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1410]/95 via-[#2a1f14]/90 to-[#1a1410]/85"></div>
+      <section className="relative text-white section-padding overflow-hidden bg-gradient-to-br from-[#3b2318] via-[#4a2e1c] to-[#5c3d2e]" data-testid="section-cta">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_50%,rgba(194,122,74,0.12),transparent)]"></div>
 
         <FloatingOrb className="absolute -top-10 right-[20%] w-[350px] h-[350px] rounded-full bg-[#c27a4a]/12 blur-[110px]" delay={1} />
         <FloatingOrb className="absolute bottom-0 left-[10%] w-[250px] h-[250px] rounded-full bg-[#5c3d2e]/15 blur-[90px]" delay={3} />
