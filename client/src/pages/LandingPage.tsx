@@ -94,7 +94,7 @@ export default function LandingPage() {
 
               <motion.p
                 initial="hidden" animate="visible" custom={3} variants={fadeUp}
-                className="text-lg md:text-xl text-white/50 leading-relaxed max-w-xl mb-12 font-light"
+                className="text-lg md:text-xl text-white/80 leading-relaxed max-w-xl mb-12 font-light"
               >
                 From concept to click, we transform ideas into digital realities that captivate your audience and grow your business &mdash; with the precision of a legal mind and the eye of a designer.
               </motion.p>
@@ -144,7 +144,7 @@ export default function LandingPage() {
                   data-testid={`stat-item-${i}`}
                 >
                   <div className="text-3xl font-serif-display font-bold text-[#c27a4a] mb-1">{stat.val}</div>
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-white/30">{stat.label}</div>
+                  <div className="text-[10px] uppercase tracking-[0.2em] text-white/60">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -271,7 +271,7 @@ export default function LandingPage() {
                 Other agencies sell you a template.<br/><span className="italic shimmer-text">We build you a brand.</span>
               </h2>
               <div className="w-16 h-[3px] shimmer-line mb-8 rounded-full"></div>
-              <p className="text-white/50 text-lg leading-relaxed mb-10">
+              <p className="text-white/80 text-lg leading-relaxed mb-10">
                 Fifteen years of working inside law firms taught us something most designers never learn: details aren't just important &mdash; they're everything. That discipline shows in every pixel, every interaction, and every line of code we deliver.
               </p>
 
@@ -293,7 +293,7 @@ export default function LandingPage() {
                     <div className="w-6 h-6 rounded-full bg-[#c27a4a]/20 flex items-center justify-center shrink-0 mt-0.5">
                       <CheckCircle2 className="w-3.5 h-3.5 text-[#c27a4a]" />
                     </div>
-                    <p className="text-white/60 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: text }}></p>
+                    <p className="text-white/80 text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: text }}></p>
                   </motion.div>
                 ))}
               </div>
@@ -321,7 +321,7 @@ export default function LandingPage() {
                         <h3 className="font-serif-display text-xl font-bold text-white">{tier.title}</h3>
                         <span className="text-[10px] font-bold uppercase tracking-wider text-[#c27a4a] whitespace-nowrap">{tier.price}</span>
                       </div>
-                      <p className="text-white/40 text-sm leading-relaxed">{tier.desc}</p>
+                      <p className="text-white/75 text-sm leading-relaxed">{tier.desc}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -445,7 +445,7 @@ export default function LandingPage() {
                     className="text-center"
                   >
                     <div className="text-2xl font-serif-display font-bold text-[#c27a4a] mb-1">{s.val}</div>
-                    <div className="text-[9px] uppercase tracking-wider text-white/30">{s.label}</div>
+                    <div className="text-[9px] uppercase tracking-wider text-white/60">{s.label}</div>
                   </motion.div>
                 ))}
               </div>
@@ -469,7 +469,7 @@ export default function LandingPage() {
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif-display font-bold mb-8 leading-[1.1]">
                   The best time to launch was yesterday.<br/><span className="italic shimmer-text">The next best time is now.</span>
                 </h2>
-                <p className="text-white/40 text-lg font-light leading-relaxed max-w-2xl mb-10">
+                <p className="text-white/80 text-lg font-light leading-relaxed max-w-2xl mb-10">
                   Stop blending in. Let's create a digital presence that makes people stop scrolling and start paying attention.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
