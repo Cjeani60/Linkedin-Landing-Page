@@ -23,11 +23,11 @@
   --sidebar: 25 25% 14%;
   --sidebar-foreground: 40 20% 90%;
   --sidebar-border: 25 20% 20%;
-  --sidebar-primary: 43 73% 44%;
+  --sidebar-primary: 22 47% 52%;
   --sidebar-primary-foreground: 0 0% 100%;
   --sidebar-accent: 25 25% 20%;
   --sidebar-accent-foreground: 40 20% 90%;
-  --sidebar-ring: 43 73% 44%;
+  --sidebar-ring: 22 47% 52%;
   --popover: 40 30% 98%;
   --popover-foreground: 25 30% 12%;
   --popover-border: 33 18% 82%;
@@ -37,13 +37,13 @@
   --secondary-foreground: 25 30% 18%;
   --muted: 33 18% 90%;
   --muted-foreground: 25 15% 42%;
-  --accent: 43 73% 44%;
+  --accent: 22 47% 52%;
   --accent-foreground: 0 0% 100%;
   --destructive: 0 72% 51%;
   --destructive-foreground: 0 0% 100%;
   --input: 33 18% 78%;
-  --ring: 43 73% 44%;
-  --chart-1: 43 73% 44%;
+  --ring: 22 47% 52%;
+  --chart-1: 22 47% 52%;
   --chart-2: 25 30% 32%;
   --chart-3: 15 60% 50%;
   --chart-4: 33 40% 60%;
@@ -98,27 +98,27 @@
   --sidebar: 25 28% 6%;
   --sidebar-foreground: 40 20% 90%;
   --sidebar-border: 25 15% 14%;
-  --sidebar-primary: 43 73% 48%;
+  --sidebar-primary: 22 47% 55%;
   --sidebar-primary-foreground: 0 0% 100%;
   --sidebar-accent: 25 22% 14%;
   --sidebar-accent-foreground: 40 20% 90%;
-  --sidebar-ring: 43 73% 48%;
+  --sidebar-ring: 22 47% 55%;
   --popover: 25 22% 11%;
   --popover-foreground: 40 20% 92%;
   --popover-border: 25 15% 18%;
-  --primary: 43 73% 48%;
+  --primary: 22 47% 55%;
   --primary-foreground: 25 30% 8%;
   --secondary: 25 18% 16%;
   --secondary-foreground: 40 20% 88%;
   --muted: 25 15% 15%;
   --muted-foreground: 33 12% 55%;
-  --accent: 43 73% 48%;
+  --accent: 22 47% 55%;
   --accent-foreground: 25 30% 8%;
   --destructive: 0 72% 51%;
   --destructive-foreground: 0 0% 100%;
   --input: 25 15% 22%;
-  --ring: 43 73% 48%;
-  --chart-1: 43 73% 48%;
+  --ring: 22 47% 55%;
+  --chart-1: 22 47% 55%;
   --chart-2: 33 30% 60%;
   --chart-3: 15 60% 55%;
   --chart-4: 200 50% 50%;
@@ -232,14 +232,25 @@
     border-color: #1a1410;
   }
 
-  .text-gold {
-    color: #b8922a;
+  .text-terra {
+    color: #c27a4a;
   }
-  .bg-gold {
-    background-color: #b8922a;
+  .bg-terra {
+    background-color: #c27a4a;
   }
-  .border-gold {
-    border-color: #b8922a;
+  .border-terra {
+    border-color: #c27a4a;
+  }
+
+  .text-terra-light {
+    color: #d4925e;
+  }
+
+  .text-choco {
+    color: #5c3d2e;
+  }
+  .bg-choco {
+    background-color: #5c3d2e;
   }
 
   .text-brown {
@@ -266,16 +277,51 @@
     background-color: #ede0cf;
   }
 
-  .btn-primary {
-    @apply inline-block px-8 py-4 bg-espresso text-white text-xs font-bold uppercase tracking-[0.15em] rounded-sm;
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33% { transform: translateY(-18px) rotate(2deg); }
+    66% { transform: translateY(8px) rotate(-1deg); }
   }
 
-  .btn-outline {
-    @apply inline-block px-8 py-4 border-2 border-espresso text-espresso text-xs font-bold uppercase tracking-[0.15em] rounded-sm;
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.08); }
   }
 
-  .btn-gold {
-    @apply inline-block px-8 py-4 bg-gold text-white text-xs font-bold uppercase tracking-[0.15em] rounded-sm;
-    box-shadow: 0 4px 16px rgba(184,146,42,0.3);
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .animate-float-slow {
+    animation: float 12s ease-in-out infinite;
+  }
+
+  .animate-float-fast {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+
+  .shimmer-text {
+    background: linear-gradient(
+      90deg,
+      #c27a4a 0%,
+      #d4925e 25%,
+      #e8b88a 50%,
+      #d4925e 75%,
+      #c27a4a 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
   }
 }
