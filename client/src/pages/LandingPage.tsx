@@ -369,7 +369,7 @@ export default function LandingPage() {
                 className="relative"
                 data-testid={`step-${i}`}
               >
-                <div className="text-7xl font-serif-display font-bold text-[#c27a4a]/10 leading-none mb-4">{item.step}</div>
+                <div className="text-7xl font-serif-display font-bold text-[#c27a4a]/40 leading-none mb-4">{item.step}</div>
                 <h3 className="text-xl font-serif-display font-bold text-espresso mb-3">{item.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: item.desc }}></p>
               </motion.div>
