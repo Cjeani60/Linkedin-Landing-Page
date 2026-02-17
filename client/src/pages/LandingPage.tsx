@@ -475,41 +475,21 @@ export default function LandingPage() {
         <FloatingOrb className="absolute bottom-0 left-[10%] w-[250px] h-[250px] rounded-full bg-[#5c3d2e]/15 blur-[90px]" delay={3} />
 
         <div className="max-w-5xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
-            <div className="lg:col-span-3 text-center lg:text-left">
+          <div className="text-center">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0} variants={fadeUp}>
                 <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#c27a4a] block mb-6">Your Move</span>
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif-display font-bold mb-8 leading-[1.1]">
                   The best time to launch was yesterday.<br/><span className="italic shimmer-text">The next best time is now.</span>
                 </h2>
-                <p className="text-white text-lg leading-relaxed max-w-2xl mb-10">
+                <p className="text-white text-lg leading-relaxed max-w-2xl mx-auto mb-10">
                   Stop blending in. Let's create a digital presence that makes people stop scrolling and start paying attention.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild className="bg-[#c27a4a] text-white border-[#c27a4a]" data-testid="button-cta-contact">
-                    <a href="https://readydeskservices.com" target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-[0.15em]">Launch Your Project</a>
-                  </Button>
-                  <Button asChild variant="outline" className="border-white/20 text-white backdrop-blur-sm bg-white/5" data-testid="button-cta-website">
-                    <a href="#contact" className="text-xs font-bold uppercase tracking-[0.15em] inline-flex items-center gap-2">
-                      Send Us a Message <ArrowRight className="w-4 h-4" />
-                    </a>
+                    <a href="#contact" className="text-xs font-bold uppercase tracking-[0.15em]">Launch Your Project</a>
                   </Button>
                 </div>
               </motion.div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="lg:col-span-2 flex justify-center"
-            >
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#c27a4a]/20 to-transparent rounded-full blur-[60px] animate-pulse-glow"></div>
-                <img src={logoImg} alt="Ready Desk Services" className="relative w-56 h-56 md:w-72 md:h-72 object-contain drop-shadow-[0_0_80px_rgba(194,122,74,0.5)]" data-testid="img-cta-logo" />
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
