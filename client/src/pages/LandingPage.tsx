@@ -62,9 +62,9 @@ export default function LandingPage() {
       <Navigation />
 
       {/* ═══ HERO ════════════════════════════════════════════════ */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#3b2318] via-[#4a2e1c] to-[#5c3d2e]" data-testid="section-hero">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_40%,rgba(194,122,74,0.15),transparent)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_60%,rgba(92,61,46,0.2),transparent)]"></div>
+      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-[#6b4a35] via-[#7d5940] to-[#8c6849]" data-testid="section-hero">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_20%_40%,rgba(194,122,74,0.2),transparent)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_80%_60%,rgba(194,122,74,0.15),transparent)]"></div>
 
         <FloatingOrb className="absolute top-[15%] left-[5%] w-[350px] h-[350px] rounded-full bg-[#c27a4a]/15 blur-[100px]" delay={0} />
         <FloatingOrb className="absolute bottom-[10%] right-[10%] w-[280px] h-[280px] rounded-full bg-[#5c3d2e]/20 blur-[90px]" delay={3} />
@@ -259,7 +259,7 @@ export default function LandingPage() {
       </section>
 
       {/* ═══ THE DIFFERENCE ══════════════════════════════════════ */}
-      <section className="bg-[#1a1410] text-white section-padding relative overflow-hidden" data-testid="section-approach">
+      <section className="bg-[#5c3d2e] text-white section-padding relative overflow-hidden" data-testid="section-approach">
         <FloatingOrb className="absolute top-[10%] left-[20%] w-[300px] h-[300px] rounded-full bg-[#c27a4a]/8 blur-[100px]" delay={2} />
         <FloatingOrb className="absolute bottom-[20%] right-[10%] w-[250px] h-[250px] rounded-full bg-[#5c3d2e]/12 blur-[80px]" delay={4} />
 
@@ -418,7 +418,7 @@ export default function LandingPage() {
             viewport={{ once: true }}
             custom={2}
             variants={scaleIn}
-            className="bg-[#1a1410] text-white p-10 md:p-14 rounded-md relative overflow-visible"
+            className="bg-[#5c3d2e] text-white p-10 md:p-14 rounded-md relative overflow-visible"
           >
             <FloatingOrb className="absolute top-0 right-0 w-64 h-64 bg-[#c27a4a]/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" delay={6} />
             <div className="relative z-10">
@@ -455,7 +455,7 @@ export default function LandingPage() {
       </section>
 
       {/* ═══ CTA BANNER ═══════════════════════════════════════════ */}
-      <section className="relative text-white section-padding overflow-hidden bg-gradient-to-br from-[#3b2318] via-[#4a2e1c] to-[#5c3d2e]" data-testid="section-cta">
+      <section className="relative text-white section-padding overflow-hidden bg-gradient-to-br from-[#6b4a35] via-[#7d5940] to-[#8c6849]" data-testid="section-cta">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_50%,rgba(194,122,74,0.12),transparent)]"></div>
 
         <FloatingOrb className="absolute -top-10 right-[20%] w-[350px] h-[350px] rounded-full bg-[#c27a4a]/12 blur-[110px]" delay={1} />
