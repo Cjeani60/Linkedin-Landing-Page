@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ready Desk Services, LLC — Where Precision Meets Practice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sand:      #c8a882;
+      --sand-lt:   #dfc6a8;
+      --sand-pale: #ede0cf;
+      --sand-bg:   #f5ede0;
+      --espresso:  #2a1f14;
+      --brown:     #4a3728;
+      --brown-mid: #6b4f38;
+      --gold:      #b8922a;
+      --gold-lt:   #d4a93a;
+      --cream:     #fdf8f2;
+      --white:     #ffffff;
+      --charcoal:  #1c1c1c;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--espresso);
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ─────────────────────────────────────────────── */
+    .hero {
+      background: var(--sand-bg);
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      bottom: -120px; right: -120px;
+      width: 480px; height: 480px;
+      border-radius: 50%;
+      background: var(--sand);
+      opacity: 0.35;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -80px; left: 38%;
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      background: var(--brown-mid);
+      opacity: 0.12;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 88px 56px 88px 72px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 52px;
+      animation: fadeUp 0.7s ease both;
+    }
+    .logo-emblem { width: 54px; height: 54px; flex-shrink: 0; }
+    .logo-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--espresso);
+      line-height: 1.2;
+    }
+    .logo-name span {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--brown-mid);
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--white);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 2px;
+      width: fit-content;
+      margin-bottom: 22px;
+      animation: fadeUp 0.7s 0.1s ease both;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(40px, 4.5vw, 66px);
+      font-weight: 700;
+      line-height: 1.08;
+      color: var(--espresso);
+      margin-bottom: 26px;
+      animation: fadeUp 0.7s 0.2s ease both;
+    }
+    .hero-title em { font-style: italic; color: var(--gold); }
+
+    .hero-rule {
+      width: 56px; height: 3px;
+      background: var(--gold);
+      margin-bottom: 24px;
+      animation: expandW 0.8s 0.35s ease both;
+    }
+    @keyframes expandW { from { width: 0; } to { width: 56px; } }
+
+    .hero-body {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--brown);
+      max-width: 420px;
+      font-weight: 300;
+      margin-bottom: 42px;
+      animation: fadeUp 0.7s 0.3s ease both;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex-wrap: wrap;
+      animation: fadeUp 0.7s 0.4s ease both;
+    }
+
+    .btn-primary {
+      background: var(--espresso);
+      color: var(--cream);
+      padding: 15px 38px;
+      border-radius: 3px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 16px rgba(42,31,20,0.2);
+    }
+    .btn-primary:hover { background: var(--brown); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(42,31,20,0.28); }
+
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--brown-mid);
+      color: var(--brown);
+      padding: 14px 36px;
+      border-radius: 3px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+    }
+    .btn-outline:hover { background: var(--espresso); color: var(--cream); transform: translateY(-2px); }
+
+    .hero-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 56px 80px 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cred-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 44px 40px;
+      box-shadow: 0 20px 60px rgba(42,31,20,0.14), 0 4px 16px rgba(42,31,20,0.08);
+      max-width: 360px;
+      width: 100%;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+    .cred-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--espresso);
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--sand-pale);
+    }
+    .cred-item { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 22px; }
+    .cred-item:last-of-type { margin-bottom: 0; }
+    .cred-icon {
+      width: 40px; height: 40px;
+      background: var(--charcoal);
+      border-radius: 8px;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .cred-icon svg { width: 20px; height: 20px; }
+    .cred-label { font-weight: 700; font-size: 14px; color: var(--espresso); margin-bottom: 4px; }
+    .cred-desc { font-size: 12.5px; color: var(--brown-mid); line-height: 1.5; }
+    .cred-quote {
+      margin-top: 28px;
+      background: var(--charcoal);
+      border-radius: 8px;
+      padding: 18px 20px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.6;
+    }
+
+    /* ── SERVICE STRIP ───────────────────────────────────── */
+    .service-strip {
+      background: var(--espresso);
+      padding: 22px 72px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 3;
+    }
+    .strip-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 0 36px;
+      border-right: 1px solid rgba(255,255,255,0.12);
+      flex: 1;
+    }
+    .strip-item:first-child { padding-left: 0; }
+    .strip-item:last-child { border-right: none; }
+    .strip-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+    .strip-text { font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.75); }
+    .strip-new {
+      font-size: 9px; letter-spacing: 1.5px;
+      background: var(--gold); color: var(--espresso);
+      font-weight: 700; padding: 2px 8px; border-radius: 2px; text-transform: uppercase;
+    }
+
+    /* ── SHARED SECTION STYLES ───────────────────────────── */
+    section { position: relative; z-index: 1; }
+    .section-inner { padding: 96px 72px; }
+    .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 3.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(32px, 3.2vw, 50px); font-weight: 700; line-height: 1.12; color: var(--espresso); margin-bottom: 16px; }
+    .section-rule { width: 44px; height: 2.5px; background: var(--gold); margin-bottom: 20px; }
+    .section-sub { font-size: 15px; color: var(--brown); line-height: 1.7; font-weight: 300; max-width: 560px; margin-bottom: 56px; }
+
+    /* ── SERVICES ────────────────────────────────────────── */
+    .services-bg { background: var(--sand-bg); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 10px;
+      padding: 40px 32px;
+      border: 1px solid var(--sand-pale);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+    }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 48px rgba(42,31,20,0.12); }
+
+    .service-card.new-service {
+      border-color: var(--gold);
+      background: linear-gradient(155deg, var(--white) 70%, #fdf3dc 100%);
+    }
+    .service-card.new-service::before {
+      content: 'NEW';
+      position: absolute; top: 18px; right: -24px;
+      background: var(--gold); color: var(--white);
+      font-size: 9px; font-weight: 700; letter-spacing: 2px;
+      padding: 4px 32px; transform: rotate(45deg);
+    }
+
+    .service-num { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 700; color: var(--sand-pale); line-height: 1; margin-bottom: 16px; }
+    .service-card.new-service .service-num { color: #f0ddb0; }
+    .service-icon-row { width: 48px; height: 48px; background: var(--sand-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; font-size: 22px; }
+    .service-card.new-service .service-icon-row { background: rgba(184,146,42,0.1); }
+    .service-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 700; color: var(--espresso); margin-bottom: 10px; line-height: 1.2; }
+    .service-desc { font-size: 13.5px; color: var(--brown-mid); line-height: 1.65; margin-bottom: 20px; }
+    .service-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .service-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--brown); background: var(--sand-bg); padding: 4px 10px; border-radius: 2px; }
+    .service-card.new-service .service-tag { background: rgba(184,146,42,0.1); color: var(--gold); }
+
+    /* ── WHY CHOOSE ──────────────────────────────────────── */
+    .why-bg { background: var(--cream); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+
+    .pillar { display: flex; gap: 20px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid var(--sand-pale); }
+    .pillar:first-child { padding-top: 0; }
+    .pillar:last-child { border-bottom: none; }
+    .pillar-num { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: var(--sand); line-height: 1; min-width: 36px; flex-shrink: 0; padding-top: 2px; }
+    .pillar-title { font-family: 'Cormorant Garamond', serif; font-size: 19px; font-weight: 700; color: var(--espresso); margin-bottom: 6px; }
+    .pillar-desc { font-size: 13.5px; color: var(--brown-mid); line-height: 1.6; }
+
+    .why-right { display: flex; flex-direction: column; gap: 20px; }
+    .quote-block { background: var(--espresso); border-radius: 10px; padding: 40px 36px; position: relative; }
+    .quote-block::before {
+      content: '\201C';
+      font-family: 'Cormorant Garamond', serif; font-size: 100px; color: var(--gold); opacity: 0.3;
+      position: absolute; top: -10px; left: 24px; line-height: 1;
+    }
+    .quote-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: rgba(255,255,255,0.9); line-height: 1.6; position: relative; z-index: 1; }
+    .quote-attr { margin-top: 16px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); position: relative; z-index: 1; }
+
+    .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .stat-box { background: var(--sand-bg); border-radius: 8px; padding: 24px 20px; border: 1px solid var(--sand-pale); text-align: center; }
+    .stat-val { font-family: 'Cormorant Garamond', serif; font-size: 38px; font-weight: 700; color: var(--espresso); line-height: 1; }
+    .stat-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--brown-mid); margin-top: 6px; }
+
+    /* ── WEB DESIGN SPOTLIGHT ────────────────────────────── */
+    .web-section { background: var(--sand-bg); }
+    .web-inner { padding: 96px 72px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+
+    .web-visual { position: relative; }
+    .browser-mock { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 24px 56px rgba(42,31,20,0.16); border: 1px solid var(--sand-pale); }
+    .browser-bar { background: var(--sand-pale); padding: 12px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #e0ccb4; }
+    .b-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .b-dot:nth-child(1) { background: #e87070; }
+    .b-dot:nth-child(2) { background: #e8c070; }
+    .b-dot:nth-child(3) { background: #70c870; }
+    .b-url { flex: 1; background: var(--white); border-radius: 4px; padding: 5px 12px; font-size: 11px; color: var(--brown-mid); margin-left: 8px; }
+
+    .browser-content { padding: 28px 24px; }
+    .mock-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .mock-logo-bar { width: 80px; height: 10px; background: var(--sand); border-radius: 3px; }
+    .mock-nav-links { display: flex; gap: 12px; }
+    .mock-nav-link { width: 32px; height: 8px; background: var(--sand-pale); border-radius: 2px; }
+    .mock-hero-block { background: var(--sand-bg); border-radius: 8px; padding: 20px; margin-bottom: 16px; text-align: center; }
+    .mock-h1 { width: 70%; height: 14px; background: var(--sand); border-radius: 3px; margin: 0 auto 8px; }
+    .mock-h1-2 { width: 50%; height: 14px; background: var(--sand); border-radius: 3px; margin: 0 auto 14px; }
+    .mock-p { width: 85%; height: 7px; background: var(--sand-pale); border-radius: 2px; margin: 0 auto 6px; }
+    .mock-p-short { width: 60%; height: 7px; background: var(--sand-pale); border-radius: 2px; margin: 0 auto 16px; }
+    .mock-cta { width: 100px; height: 28px; background: var(--espresso); border-radius: 3px; margin: 0 auto; }
+    .mock-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+    .mock-card { background: var(--sand-bg); border-radius: 6px; padding: 12px; }
+    .mock-card-top { width: 100%; height: 6px; background: var(--gold); border-radius: 2px; margin-bottom: 8px; }
+    .mock-card-line { height: 5px; background: var(--sand-pale); border-radius: 2px; margin-bottom: 4px; }
+    .mock-card-line-short { height: 5px; width: 70%; background: var(--sand-pale); border-radius: 2px; }
+
+    .web-float-badge {
+      position: absolute; bottom: -18px; right: -18px;
+      background: var(--gold); color: var(--white);
+      border-radius: 10px; padding: 18px 22px;
+      font-family: 'Cormorant Garamond', serif; font-size: 15px; font-weight: 700;
+      box-shadow: 0 8px 24px rgba(184,146,42,0.4); line-height: 1.3;
+    }
+    .web-float-badge span { display: block; font-family: 'Lato', sans-serif; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; margin-bottom: 2px; }
+
+    .web-tagline { background: rgba(184,146,42,0.1); border-left: 3px solid var(--gold); padding: 14px 18px; font-size: 14px; color: var(--brown); line-height: 1.6; margin-bottom: 32px; border-radius: 0 4px 4px 0; }
+    .web-features { display: flex; flex-direction: column; gap: 16px; margin-bottom: 36px; }
+    .web-feature { display: flex; gap: 14px; align-items: flex-start; }
+    .web-feature-dot { width: 22px; height: 22px; border-radius: 50%; background: var(--espresso); flex-shrink: 0; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+    .web-feature-dot svg { width: 11px; height: 11px; }
+    .web-feature-text { font-size: 14px; color: var(--brown); line-height: 1.55; }
+    .web-feature-text strong { color: var(--espresso); font-weight: 700; }
+
+    /* ── CTA BANNER ──────────────────────────────────────── */
+    .cta-banner {
+      background: var(--espresso);
+      padding: 80px 72px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-banner::before { content: ''; position: absolute; top: -80px; right: 200px; width: 320px; height: 320px; border-radius: 50%; background: var(--brown); opacity: 0.3; }
+    .cta-banner::after { content: ''; position: absolute; bottom: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: var(--brown-mid); opacity: 0.25; }
+
+    .cta-text { position: relative; z-index: 1; }
+    .cta-eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-lt); margin-bottom: 12px; }
+    .cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(28px, 3vw, 44px); font-weight: 700; color: var(--white); line-height: 1.15; margin-bottom: 14px; }
+    .cta-sub { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.65; max-width: 480px; font-weight: 300; }
+
+    .cta-actions { display: flex; flex-direction: column; gap: 12px; align-items: center; position: relative; z-index: 1; flex-shrink: 0; }
+    .cta-btn-main { background: var(--gold); color: var(--white); padding: 16px 42px; border-radius: 3px; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; transition: background 0.25s ease, transform 0.2s ease; white-space: nowrap; box-shadow: 0 6px 20px rgba(184,146,42,0.35); }
+    .cta-btn-main:hover { background: var(--gold-lt); transform: translateY(-2px); }
+    .cta-btn-ghost { color: rgba(255,255,255,0.5); font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; transition: color 0.2s ease; }
+    .cta-btn-ghost:hover { color: var(--white); }
+
+    /* ── FOOTER ──────────────────────────────────────────── */
+    footer { background: var(--charcoal); padding: 28px 72px; display: flex; align-items: center; justify-content: space-between; }
+    .footer-name { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.7); }
+    .footer-link { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); text-decoration: none; }
+    .footer-link:hover { color: var(--gold-lt); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ── RESPONSIVE ──────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .hero-left { padding: 72px 36px; }
+      .service-strip { padding: 18px 36px; flex-wrap: wrap; gap: 12px; }
+      .strip-item { padding: 0 16px; flex: none; }
+      .section-inner { padding: 72px 36px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: 1fr; }
+      .web-inner { grid-template-columns: 1fr; padding: 72px 36px; }
+      .web-visual { display: none; }
+      .cta-banner { grid-template-columns: 1fr; padding: 60px 36px; }
+      .cta-actions { align-items: flex-start; }
+      footer { flex-direction: column; gap: 10px; padding: 24px 36px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HERO ════════════════════════════════════════════════ -->
+<section class="hero" style="padding:0;">
+  <div class="hero-left">
+    <div class="logo-row">
+      <svg class="logo-emblem" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M27 3 L49 13 L49 30 C49 41 38 49 27 52 C16 49 5 41 5 30 L5 13 Z" fill="#b8922a" opacity="0.15"/>
+        <path d="M27 5 L47 14 L47 30 C47 40.5 37 48 27 51 C17 48 7 40.5 7 30 L7 14 Z" fill="none" stroke="#b8922a" stroke-width="1.5"/>
+        <text x="27" y="34" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-weight="bold" fill="#b8922a">RDS</text>
+      </svg>
+      <div class="logo-name">Ready Desk Services<span>LLC</span></div>
+    </div>
+
+    <div class="hero-tag">Legal &amp; Administrative Services</div>
+
+    <h1 class="hero-title">
+      Precision. Partnership.<br/>
+      <em>Peace of mind.</em>
+    </h1>
+
+    <div class="hero-rule"></div>
+
+    <p class="hero-body">
+      Attorney support that thinks like a lawyer and works like a partner. From trial-ready paralegal services to accurate transcription — and now, the digital presence your practice deserves.
+    </p>
+
+    <div class="hero-cta-row">
+      <a href="https://readydesk.com" target="_blank" class="btn-primary">Visit Our Website</a>
+      <a href="https://readydesk.com" target="_blank" class="btn-outline">Our Services</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="cred-card">
+      <div class="cred-heading">Professional Credentials</div>
+      <div class="cred-item">
+        <div class="cred-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div>
+          <div class="cred-label">ABA-Approved</div>
+          <div class="cred-desc">Graduate of an ABA-approved paralegal program with a B.S. in Paralegal Studies.</div>
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div>
+          <div class="cred-label">15 Years Experience</div>
+          <div class="cred-desc">I know the pace, the pressure, and the details that matter in the legal field.</div>
+        </div>
+      </div>
+      <div class="cred-item">
+        <div class="cred-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div>
+          <div class="cred-label">Honor Society</div>
+          <div class="cred-desc">Recognized by Lambda Epsilon Chi — National Paralegal Honor Society.</div>
+        </div>
+      </div>
+      <div class="cred-quote">"When cost, security, confidentiality, and getting it right counts — call us."</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICE STRIP ════════════════════════════════════════ -->
+<div class="service-strip">
+  <div class="strip-item">
+    <div class="strip-dot"></div>
+    <div class="strip-text">Paralegal Services</div>
+  </div>
+  <div class="strip-item">
+    <div class="strip-dot"></div>
+    <div class="strip-text">Transcription Services</div>
+  </div>
+  <div class="strip-item">
+    <div class="strip-dot" style="background:#d4a93a;"></div>
+    <div class="strip-text">Web Design &amp; Development</div>
+    <div class="strip-new">New</div>
+  </div>
+</div>
+
+<!-- ═══ SERVICES ════════════════════════════════════════════ -->
+<section class="services-bg">
+  <div class="section-inner">
+    <div class="eyebrow">What We Offer</div>
+    <h2 class="section-title">Three ways we show up<br/>for your practice</h2>
+    <div class="section-rule"></div>
+    <p class="section-sub">Ready Desk Services brings the experience, attention to detail, and confidentiality that solo practitioners and small firms deserve — at every stage of their work.</p>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-icon-row">⚖️</div>
+        <div class="service-name">Paralegal Services</div>
+        <p class="service-desc">Trial preparation, document drafting, case management, and litigation support — handled by someone who has lived inside law firms for 15 years and knows what attorneys actually need.</p>
+        <div class="service-tags">
+          <span class="service-tag">Personal Injury</span>
+          <span class="service-tag">Civil Litigation</span>
+          <span class="service-tag">Trial Prep</span>
+          <span class="service-tag">Document Drafting</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-icon-row">🎙️</div>
+        <div class="service-name">Transcription Services</div>
+        <p class="service-desc">Accurate, confidential transcription of depositions, hearings, client interviews, and recorded dictation. Every word captured correctly — because precision in the record is non-negotiable.</p>
+        <div class="service-tags">
+          <span class="service-tag">Depositions</span>
+          <span class="service-tag">Hearings</span>
+          <span class="service-tag">Client Interviews</span>
+          <span class="service-tag">Dictation</span>
+        </div>
+      </div>
+
+      <div class="service-card new-service">
+        <div class="service-num">03</div>
+        <div class="service-icon-row">💻</div>
+        <div class="service-name">Web Design &amp; Development</div>
+        <p class="service-desc">A professional online presence built by someone who understands the legal world. Clean, credible websites that attract the right clients — with the same precision we bring to every matter.</p>
+        <div class="service-tags">
+          <span class="service-tag">Law Firm Sites</span>
+          <span class="service-tag">Custom Design</span>
+          <span class="service-tag">Mobile Ready</span>
+          <span class="service-tag">Brand Identity</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY CHOOSE ═══════════════════════════════════════════ -->
+<section class="why-bg">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div class="why-left">
+        <div class="eyebrow">Why Ready Desk Services</div>
+        <h2 class="section-title">You need more than<br/>just support staff</h2>
+        <div class="section-rule"></div>
+        <div class="pillar-list">
+          <div class="pillar">
+            <div class="pillar-num">01</div>
+            <div>
+              <div class="pillar-title">No supervision required</div>
+              <p class="pillar-desc">C.J. brings 15 years of legal field experience. You explain the matter once and it gets done right — without hand-holding.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">02</div>
+            <div>
+              <div class="pillar-title">Confidentiality as a standard</div>
+              <p class="pillar-desc">Every matter is treated with strict discretion. Your client files, recordings, and case details are always protected.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">03</div>
+            <div>
+              <div class="pillar-title">Built for small firms &amp; solos</div>
+              <p class="pillar-desc">You don't need a 10-person firm's overhead. You need a reliable partner who scales with your caseload and shows up when it matters.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-num">04</div>
+            <div>
+              <div class="pillar-title">Detail-oriented, always</div>
+              <p class="pillar-desc">ABA-approved training and Honor Society recognition reflect a standard that carries into every document, transcript, and deliverable.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="why-right">
+        <div class="quote-block">
+          <div class="quote-text">"When cost, security, confidentiality, and getting it right counts — call us."</div>
+          <div class="quote-attr">— C.J., Ready Desk Services, LLC</div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-val">15+</div><div class="stat-label">Years in Legal</div></div>
+          <div class="stat-box"><div class="stat-val">ABA</div><div class="stat-label">Approved Program</div></div>
+          <div class="stat-box"><div class="stat-val">ΛΕΧ</div><div class="stat-label">Honor Society</div></div>
+          <div class="stat-box"><div class="stat-val">3</div><div class="stat-label">Core Services</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WEB DESIGN SPOTLIGHT ════════════════════════════════ -->
+<section class="web-section">
+  <div class="web-inner">
+    <div class="web-visual">
+      <div class="browser-mock">
+        <div class="browser-bar">
+          <div class="b-dot"></div><div class="b-dot"></div><div class="b-dot"></div>
+          <div class="b-url">yourlawfirm.com</div>
+        </div>
+        <div class="browser-content">
+          <div class="mock-nav">
+            <div class="mock-logo-bar"></div>
+            <div class="mock-nav-links"><div class="mock-nav-link"></div><div class="mock-nav-link"></div><div class="mock-nav-link"></div></div>
+          </div>
+          <div class="mock-hero-block">
+            <div class="mock-h1"></div><div class="mock-h1-2"></div>
+            <div class="mock-p"></div><div class="mock-p-short"></div>
+            <div class="mock-cta"></div>
+          </div>
+          <div class="mock-cards">
+            <div class="mock-card"><div class="mock-card-top"></div><div class="mock-card-line"></div><div class="mock-card-line"></div><div class="mock-card-line-short"></div></div>
+            <div class="mock-card"><div class="mock-card-top"></div><div class="mock-card-line"></div><div class="mock-card-line"></div><div class="mock-card-line-short"></div></div>
+            <div class="mock-card"><div class="mock-card-top"></div><div class="mock-card-line"></div><div class="mock-card-line"></div><div class="mock-card-line-short"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="web-float-badge"><span>Now Offering</span>Web Design &amp;<br/>Development</div>
+    </div>
+
+    <div class="web-text">
+      <div class="eyebrow">Expanding Our Services</div>
+      <h2 class="section-title">Your firm deserves a website that works as hard as you do</h2>
+      <div class="section-rule"></div>
+      <div class="web-tagline">A strong online presence isn't optional anymore — it's how clients find you, evaluate you, and decide to call you. We build websites that make that first impression count.</div>
+      <div class="web-features">
+        <div class="web-feature">
+          <div class="web-feature-dot"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="web-feature-text"><strong>Designed for legal professionals</strong> — we understand your audience, your tone, and how trust is built online.</div>
+        </div>
+        <div class="web-feature">
+          <div class="web-feature-dot"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="web-feature-text"><strong>Mobile-responsive and search-ready</strong> — built to perform on every device and be found where clients are searching.</div>
+        </div>
+        <div class="web-feature">
+          <div class="web-feature-dot"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="web-feature-text"><strong>Clean, credible, and on-brand</strong> — every design reflects the professionalism and trust your practice has built.</div>
+        </div>
+        <div class="web-feature">
+          <div class="web-feature-dot"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="web-feature-text"><strong>The same attention to detail</strong> you'd expect from 15 years in the legal field — applied to your digital presence.</div>
+        </div>
+      </div>
+      <a href="https://readydesk.com" target="_blank" class="btn-primary">Learn More at ReadyDesk.com</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA BANNER ═══════════════════════════════════════════ -->
+<div class="cta-banner">
+  <div class="cta-text">
+    <div class="cta-eyebrow">Ready to work together?</div>
+    <h2 class="cta-title">Let's talk about what<br/>your practice needs.</h2>
+    <p class="cta-sub">Whether you need paralegal support for a complex PI matter, accurate transcription under a tight deadline, or a website that finally reflects the quality of your work — we're ready.</p>
+  </div>
+  <div class="cta-actions">
+    <a href="https://readydesk.com" target="_blank" class="cta-btn-main">Visit ReadyDesk.com</a>
+    <a href="https://readydesk.com" target="_blank" class="cta-btn-ghost">View All Services →</a>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-name">Ready Desk Services, LLC</div>
+  <a href="https://readydesk.com" target="_blank" class="footer-link">readydesk.com →</a>
+</footer>
+
+</body>
+</html>
