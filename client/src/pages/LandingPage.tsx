@@ -2,11 +2,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Globe, Palette, Zap, CheckCircle2, ArrowRight, ExternalLink, Monitor, Code, Layers, Sparkles, Shield, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useCreateInquiry } from "@/hooks/use-inquiries";
-import { insertInquirySchema, type InsertInquiry } from "@shared/schema";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -48,20 +43,10 @@ function FloatingOrb({ className, delay = 0 }: { className: string; delay?: numb
 }
 
 export default function LandingPage() {
-  const createInquiry = useCreateInquiry();
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const heroY = useTransform(scrollYProgress, [0, 1], [0, 150]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
-
-  const form = useForm<InsertInquiry>({
-    resolver: zodResolver(insertInquirySchema),
-    defaultValues: { name: "", email: "", message: "" }
-  });
-
-  const onSubmit = (data: InsertInquiry) => {
-    createInquiry.mutate(data, { onSuccess: () => form.reset() });
-  };
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-terra/20">
@@ -525,63 +510,34 @@ export default function LandingPage() {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={2} variants={scaleIn}>
             <div className="bg-white rounded-md p-8 md:p-10 border border-border shadow-sm">
-              <Form {...form}>
-                <form method="POST" data-netlify="true" name="linkedin-contact" onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-testid="form-contact">
-                  <input type="hidden" name="form-name" value="linkedin-contact" />
-                  <FormField
-                    control={form.control}
-                    name="name"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="uppercase text-[10px] font-bold tracking-[0.15em] text-espresso/50">Your Name</FormLabel>
-                        <FormControl>
-                          <Input placeholder="Full Name" {...field} className="bg-[#f5ede0]/50 border-border" data-testid="input-name" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
-                    name="email"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="uppercase text-[10px] font-bold tracking-[0.15em] text-espresso/50">Email Address</FormLabel>
-                        <FormControl>
-                          <Input placeholder="you@company.com" {...field} className="bg-[#f5ede0]/50 border-border" data-testid="input-email" />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-                  <FormField
-                    control={form.control}
+              <form method="POST" data-netlify="true" name="linkedin-contact" className="space-y-6" data-testid="form-contact">
+                <input type="hidden" name="form-name" value="linkedin-contact" />
+                <div className="space-y-2">
+                  <label className="uppercase text-[10px] font-bold tracking-[0.15em] text-espresso/50">Your Name</label>
+                  <Input name="name" placeholder="Full Name" required className="bg-[#f5ede0]/50 border-border" data-testid="input-name" />
+                </div>
+                <div className="space-y-2">
+                  <label className="uppercase text-[10px] font-bold tracking-[0.15em] text-espresso/50">Email Address</label>
+                  <Input name="email" type="email" placeholder="you@company.com" required className="bg-[#f5ede0]/50 border-border" data-testid="input-email" />
+                </div>
+                <div className="space-y-2">
+                  <label className="uppercase text-[10px] font-bold tracking-[0.15em] text-espresso/50">Your Message</label>
+                  <Textarea
                     name="message"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="uppercase text-[10px] font-bold tracking-[0.15em] text-espresso/50">Your Message</FormLabel>
-                        <FormControl>
-                          <Textarea
-                            placeholder="Tell us what you're building, where you're headed, and how we can help..."
-                            className="min-h-[140px] bg-[#f5ede0]/50 border-border resize-none"
-                            {...field}
-                            data-testid="input-message"
-                          />
-                        </FormControl>
-                        <FormMessage />
-                      </FormItem>
-                    )}
+                    placeholder="Tell us what you're building, where you're headed, and how we can help..."
+                    className="min-h-[140px] bg-[#f5ede0]/50 border-border resize-none"
+                    required
+                    data-testid="input-message"
                   />
-                  <Button
-                    type="submit"
-                    disabled={createInquiry.isPending}
-                    className="w-full bg-[#c27a4a] text-white text-xs font-bold uppercase tracking-[0.15em] py-6"
-                    data-testid="button-submit"
-                  >
-                    {createInquiry.isPending ? "Sending..." : "Send Message"}
-                  </Button>
-                </form>
-              </Form>
+                </div>
+                <Button
+                  type="submit"
+                  className="w-full bg-[#c27a4a] text-white text-xs font-bold uppercase tracking-[0.15em] py-6"
+                  data-testid="button-submit"
+                >
+                  Send Message
+                </Button>
+              </form>
             </div>
           </motion.div>
         </div>
