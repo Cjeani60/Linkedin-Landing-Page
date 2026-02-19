@@ -526,7 +526,15 @@ export default function LandingPage() {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={2} variants={scaleIn}>
             <div className="bg-white rounded-md p-8 md:p-10 border border-border shadow-sm">
               <Form {...form}>
-                <form method="POST" data-netlify="true" name="linkedin-contact" onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" data-testid="form-contact">
+                <form
+  method="POST"
+  data-netlify="true"
+  name="linkedin-contact"
+  action="/"
+  className="space-y-6"
+  data-testid="form-contact"
+>
+
                   <input type="hidden" name="form-name" value="linkedin-contact" />
                   <FormField
                     control={form.control}
