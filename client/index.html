@@ -11,5 +11,11 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <form name="linkedin-contact" method="POST" data-netlify="true" hidden>
+      <input type="hidden" name="form-name" value="linkedin-contact" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>
