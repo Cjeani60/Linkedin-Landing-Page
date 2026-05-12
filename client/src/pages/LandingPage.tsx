@@ -317,9 +317,9 @@ export default function LandingPage() {
                 <div className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#c27a4a] mb-6">Investment Tiers</div>
                 <div className="space-y-8">
                   {[
-                    { title: "Spark", desc: "A single high-impact page to validate your idea, capture leads, and make a powerful first impression.", price: "$250–$300" },
-                    { title: "Ignite", desc: "A multi-page site with custom branding, mobile-first design, and built-in SEO foundations to compete from day one.", price: "From $300" },
-                    { title: "Blaze", desc: "The complete package: strategy, branding, content, development, and ongoing partnership to dominate your market.", price: "Custom" },
+                    { title: "Spark — Tier 1", desc: "A single high-impact page to validate your idea, capture leads, and make a powerful first impression.", price: "From $275" },
+                    { title: "Ignite — Tier 2", desc: "A multi-page site with custom branding, mobile-first design, and built-in SEO foundations to compete from day one.", price: "From $375" },
+                    { title: "Blaze — Tier 3", desc: "The complete package: strategy, branding, content, development, and ongoing partnership to dominate your market.", price: "From $700" },
                   ].map((tier, i) => (
                     <motion.div
                       key={i}
