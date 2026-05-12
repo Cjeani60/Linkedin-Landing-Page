@@ -68,7 +68,7 @@ export default function LandingPage() {
                 <div className="flex items-center gap-3 mb-8">
                   <div className="h-px flex-1 max-w-[50px] bg-gradient-to-r from-[#c27a4a] to-transparent"></div>
                   <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#c27a4a]">
-                    Web Design &middot; Paralegal
+                    Web Design &middot; Paralegal Support
                   </span>
                 </div>
               </motion.div>
@@ -181,7 +181,7 @@ export default function LandingPage() {
           </div>
           <div className="flex items-center gap-3">
             <Shield className="w-4 h-4 text-white" />
-            <span className="text-xs font-bold uppercase tracking-[0.15em] text-white">Paralegal Services</span>
+            <span className="text-xs font-bold uppercase tracking-[0.15em] text-white">Paralegal Support</span>
           </div>
         </motion.div>
       </div>

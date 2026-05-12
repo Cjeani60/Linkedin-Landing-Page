@@ -71,7 +71,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Ready Desk Services, LLC. All Rights Reserved.
           </span>
           <span className="text-xs text-white/30">
-            Web Design &middot; Paralegal
+            Web Design &middot; Paralegal Support
           </span>
         </div>
       </div>
