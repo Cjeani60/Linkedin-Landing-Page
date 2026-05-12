@@ -1,64 +1,45 @@
 import { motion } from "framer-motion";
-import logoImg from "@assets/Logo_website_2026.png";
 
-const SITE = "https://readydeskservices.com";
 const BOOKING = "https://calendly.com/cj-readydeskservices/30min";
-
-const navLinks = [
-  { label: "Home", href: `${SITE}/` },
-  { label: "Why Ready Desk", href: `${SITE}/why-ready-desk` },
-  { label: "About", href: `${SITE}/about` },
-  { label: "Services", href: `${SITE}/services` },
-  { label: "Contact", href: `${SITE}/contact` },
-];
 
 const HEADER_GRADIENT =
   "linear-gradient(90deg, #4d3a2b 0%, #57433b 12%, #65503f 22%, #7a6351 33%, #937d67 45%, #ab967e 55%, #beac98 65%, #d0c3b2 75%, #a59787 85%, #6c5b4b 100%)";
 
 export default function Navigation() {
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <nav
-      className="fixed top-0 left-0 w-full z-[9999] flex justify-between items-center px-6 md:px-12 lg:px-20"
+      className="fixed top-0 left-0 w-full z-[9999] flex justify-end items-center px-6 md:px-12 lg:px-20"
       style={{
         height: "140px",
         background: HEADER_GRADIENT,
       }}
       data-testid="navigation"
     >
-      <motion.a
-        href={SITE}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center no-underline cursor-pointer"
-        data-testid="link-home"
+      <motion.div
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
-        whileHover={{ scale: 1.04 }}
+        className="hidden md:flex items-center gap-9 flex-wrap"
       >
-        <motion.img
-          src={logoImg}
-          alt="Ready Desk Services, LLC"
-          className="h-[110px] w-auto object-contain drop-shadow-[0_2px_6px_rgba(0,0,0,0.25)]"
-          data-testid="img-logo"
-          animate={{ y: [0, -3, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </motion.a>
-
-      <div className="hidden lg:flex items-center gap-9">
-        {navLinks.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-libre text-[13px] font-normal tracking-[0.22em] uppercase text-white/95 hover:text-white transition-colors whitespace-nowrap"
-            data-testid={`button-nav-${link.label.toLowerCase().replace(/\s+/g, "-")}`}
-          >
-            {link.label}
-          </a>
-        ))}
+        <button
+          onClick={() => scrollTo("showcase")}
+          className="font-libre text-[13px] font-normal tracking-[0.22em] uppercase text-white/95 hover:text-white transition-colors whitespace-nowrap"
+          data-testid="button-nav-webdesign"
+        >
+          What We Do
+        </button>
+        <button
+          onClick={() => scrollTo("process")}
+          className="font-libre text-[13px] font-normal tracking-[0.22em] uppercase text-white/95 hover:text-white transition-colors whitespace-nowrap"
+          data-testid="button-nav-process"
+        >
+          Process
+        </button>
         <a
           href={BOOKING}
           target="_blank"
@@ -68,7 +49,7 @@ export default function Navigation() {
         >
           Let's Talk
         </a>
-      </div>
+      </motion.div>
     </nav>
   );
 }
