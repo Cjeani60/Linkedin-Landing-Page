@@ -68,7 +68,7 @@ export default function LandingPage() {
                 <div className="flex items-center gap-3 mb-8">
                   <div className="h-px flex-1 max-w-[50px] bg-gradient-to-r from-[#c27a4a] to-transparent"></div>
                   <span className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#c27a4a]">
-                    Web Design &middot; Paralegal &middot; Transcription
+                    Web Design &middot; Paralegal
                   </span>
                 </div>
               </motion.div>
@@ -182,10 +182,6 @@ export default function LandingPage() {
           <div className="flex items-center gap-3">
             <Shield className="w-4 h-4 text-white" />
             <span className="text-xs font-bold uppercase tracking-[0.15em] text-white">Paralegal Services</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Clock className="w-4 h-4 text-white" />
-            <span className="text-xs font-bold uppercase tracking-[0.15em] text-white">Transcription Services</span>
           </div>
         </motion.div>
       </div>
@@ -403,7 +399,6 @@ export default function LandingPage() {
             <div className="space-y-5 mb-10">
               {[
                 { title: "Paralegal Support", desc: "Litigation-ready expertise for solo practitioners and boutique firms who demand excellence." },
-                { title: "Transcription Precision", desc: "Every word captured with the accuracy and confidentiality your cases demand." },
               ].map((svc, i) => (
                 <motion.div
                   key={i}
