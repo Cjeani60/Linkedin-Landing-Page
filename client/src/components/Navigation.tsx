@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import rdsLetters from "@assets/rds-letters_1778618606398.png";
+import rdsArch from "@assets/rds-arch_1778618616865.png";
 
 const BOOKING = "https://calendly.com/cj-readydeskservices/30min";
 
@@ -13,13 +15,37 @@ export default function Navigation() {
 
   return (
     <nav
-      className="fixed top-0 left-0 w-full z-[9999] flex justify-end items-center px-6 md:px-12 lg:px-20"
+      className="fixed top-0 left-0 w-full z-[9999] flex justify-between items-center px-6 md:px-12 lg:px-20"
       style={{
         height: "140px",
         background: HEADER_GRADIENT,
       }}
       data-testid="navigation"
     >
+      <a
+        href="#"
+        onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+        className="relative flex items-center justify-center h-full"
+        style={{ width: "230px" }}
+        data-testid="link-nav-logo"
+        aria-label="Ready Desk Services, LLC"
+      >
+        <motion.img
+          src={rdsArch}
+          alt=""
+          aria-hidden="true"
+          className="absolute pointer-events-none select-none"
+          style={{ width: "210px", top: "14px", left: "10px" }}
+          animate={{ y: [0, -4, 0], opacity: [0.85, 1, 0.85] }}
+          transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <img
+          src={rdsLetters}
+          alt="Ready Desk Services, LLC"
+          className="relative pointer-events-none select-none"
+          style={{ width: "230px", marginTop: "12px" }}
+        />
+      </a>
       <motion.div
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
