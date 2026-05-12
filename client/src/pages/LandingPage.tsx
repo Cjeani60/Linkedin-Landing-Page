@@ -469,7 +469,7 @@ export default function LandingPage() {
                 </div>
               </div>
               <blockquote className="font-serif-display text-2xl md:text-3xl leading-relaxed mb-8 text-center italic text-white">
-                "Three services, one team &mdash; customizable packages built to fit every need."
+                "Two services, one team &mdash; customizable packages built to fit every need."
               </blockquote>
               <div className="text-sm font-bold tracking-[0.15em] uppercase text-[#c27a4a] text-center">Ready Desk Services, LLC</div>
 
