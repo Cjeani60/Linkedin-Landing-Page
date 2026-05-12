@@ -106,10 +106,7 @@ export default function LandingPage() {
               transition={{ duration: 1.2, delay: 0.5, ease: [0.25, 0.4, 0.25, 1] }}
               className="relative hidden lg:flex justify-center items-center"
             >
-              <div className="absolute w-[500px] h-[500px] rounded-full border border-[#c27a4a]/10 animate-pulse-glow"></div>
-              <div className="absolute w-[420px] h-[420px] rounded-full border border-[#5c3d2e]/15 animate-float-slow"></div>
-              <div className="absolute w-[340px] h-[340px] rounded-full bg-gradient-to-br from-[#c27a4a]/8 to-[#5c3d2e]/8 animate-float"></div>
-              <img src={logoImg} alt="Ready Desk Services" className="relative w-[480px] h-auto object-contain drop-shadow-[0_0_100px_rgba(194,122,74,0.5)]" data-testid="img-hero-logo" />
+              <img src={logoImg} alt="Ready Desk Services" className="relative w-[520px] h-auto object-contain drop-shadow-[0_0_80px_rgba(194,122,74,0.35)]" data-testid="img-hero-logo" />
             </motion.div>
           </div>
 
@@ -417,10 +414,7 @@ export default function LandingPage() {
             <div className="relative z-10">
               <div className="flex justify-center mb-8">
                 <div className="relative flex justify-center items-center">
-                  <div className="absolute w-[220px] h-[220px] rounded-full border border-[#c27a4a]/15 animate-pulse-glow"></div>
-                  <div className="absolute w-[185px] h-[185px] rounded-full border border-white/10 animate-float-slow"></div>
-                  <div className="absolute w-[150px] h-[150px] rounded-full bg-gradient-to-br from-[#c27a4a]/10 to-[#5c3d2e]/10 animate-float"></div>
-                  <img src={logoImg} alt="RDS" className="relative w-56 h-auto object-contain drop-shadow-[0_0_60px_rgba(194,122,74,0.4)]" />
+                  <img src={logoImg} alt="RDS" className="relative w-64 h-auto object-contain drop-shadow-[0_0_40px_rgba(194,122,74,0.3)]" />
                 </div>
               </div>
               <blockquote className="font-serif-display text-2xl md:text-3xl leading-relaxed mb-8 text-center italic text-white">
@@ -489,7 +483,7 @@ export default function LandingPage() {
             </h2>
             <div className="w-16 h-[3px] bg-gradient-to-r from-[#c27a4a] to-[#5c3d2e] mb-8 rounded-full"></div>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              Drop us a line. We read every message personally and respond with a candid assessment of how we can help &mdash; no bots, no runaround.
+              Drop us a line at <a href="mailto:cj@readydeskservices.com" className="text-[#c27a4a] font-semibold hover:underline" data-testid="link-contact-email">cj@readydeskservices.com</a>. We read every message personally and respond with a candid assessment of how we can help &mdash; no bots, no runaround.
             </p>
 
             <div className="space-y-6">
