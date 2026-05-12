@@ -25,8 +25,8 @@ export default function Navigation() {
       <a
         href="#"
         onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-        className="relative flex items-center justify-center h-full"
-        style={{ width: "230px" }}
+        className="relative h-full block"
+        style={{ width: "260px" }}
         data-testid="link-nav-logo"
         aria-label="Ready Desk Services, LLC"
       >
@@ -35,15 +35,15 @@ export default function Navigation() {
           alt=""
           aria-hidden="true"
           className="absolute pointer-events-none select-none"
-          style={{ width: "210px", top: "14px", left: "10px" }}
+          style={{ width: "260px", top: "30px", left: "0" }}
           animate={{ y: [0, -4, 0], opacity: [0.85, 1, 0.85] }}
           transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
         />
         <img
           src={rdsLetters}
           alt="Ready Desk Services, LLC"
-          className="relative pointer-events-none select-none"
-          style={{ width: "230px", marginTop: "12px" }}
+          className="absolute pointer-events-none select-none"
+          style={{ width: "260px", top: "42px", left: "0" }}
         />
       </a>
       <motion.div
