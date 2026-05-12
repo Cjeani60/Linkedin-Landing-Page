@@ -438,7 +438,13 @@ export default function LandingPage() {
                 <div className="relative flex justify-center items-center w-full min-h-[260px]">
                   <div className="absolute w-[340px] h-[340px] rounded-full border border-[#c27a4a]/20 animate-pulse-glow"></div>
                   <div className="absolute w-[280px] h-[280px] rounded-full border border-white/10 animate-float-slow"></div>
-                  <div className="absolute w-[220px] h-[220px] rounded-full bg-gradient-to-br from-[#c27a4a]/12 to-[#5c3d2e]/12 animate-float"></div>
+                  <div
+                    className="absolute w-[220px] h-[220px] rounded-full animate-float"
+                    style={{
+                      background:
+                        "linear-gradient(135deg, #4d3a2b 0%, #65503f 22%, #937d67 45%, #beac98 65%, #d0c3b2 80%, #a59787 100%)",
+                    }}
+                  ></div>
                   <motion.div
                     animate={{ y: [0, -8, 0] }}
                     transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
