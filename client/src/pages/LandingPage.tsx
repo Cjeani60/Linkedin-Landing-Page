@@ -434,9 +434,32 @@ export default function LandingPage() {
           >
             <FloatingOrb className="absolute top-0 right-0 w-64 h-64 bg-[#c27a4a]/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" delay={6} />
             <div className="relative z-10">
-              <div className="flex justify-center mb-8">
-                <div className="relative flex justify-center items-center">
-                  <img src={logoImg} alt="RDS" className="relative w-64 h-auto object-contain drop-shadow-[0_0_40px_rgba(194,122,74,0.3)]" />
+              <div className="flex justify-center mb-10">
+                <div className="relative flex justify-center items-center w-full min-h-[260px]">
+                  <div className="absolute w-[340px] h-[340px] rounded-full border border-[#c27a4a]/20 animate-pulse-glow"></div>
+                  <div className="absolute w-[280px] h-[280px] rounded-full border border-white/10 animate-float-slow"></div>
+                  <div className="absolute w-[220px] h-[220px] rounded-full bg-gradient-to-br from-[#c27a4a]/12 to-[#5c3d2e]/12 animate-float"></div>
+                  <motion.div
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                    className="relative z-10 text-center px-6"
+                  >
+                    <div
+                      className="font-script text-white leading-[0.95] whitespace-nowrap drop-shadow-[0_4px_18px_rgba(0,0,0,0.5)]"
+                      style={{
+                        fontSize: "clamp(2.75rem, 5vw, 4.5rem)",
+                        WebkitTextStroke: "1px #ffffff",
+                      }}
+                    >
+                      Ready Desk
+                    </div>
+                    <div
+                      className="font-libre text-white uppercase tracking-[0.22em] mt-2 whitespace-nowrap pl-[42%]"
+                      style={{ fontSize: "clamp(0.7rem, 1.1vw, 1.05rem)" }}
+                    >
+                      Services, LLC
+                    </div>
+                  </motion.div>
                 </div>
               </div>
               <blockquote className="font-serif-display text-2xl md:text-3xl leading-relaxed mb-8 text-center italic text-white">
