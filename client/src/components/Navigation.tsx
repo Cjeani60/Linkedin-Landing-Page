@@ -30,20 +30,20 @@ export default function Navigation() {
         data-testid="link-nav-logo"
         aria-label="Ready Desk Services, LLC"
       >
+        <img
+          src={rdsLetters}
+          alt="Ready Desk Services, LLC"
+          className="absolute pointer-events-none select-none"
+          style={{ width: "260px", top: "30px", left: "0" }}
+        />
         <motion.img
           src={rdsArch}
           alt=""
           aria-hidden="true"
           className="absolute pointer-events-none select-none"
           style={{ width: "260px", top: "30px", left: "0" }}
-          animate={{ y: [0, -4, 0], opacity: [0.85, 1, 0.85] }}
+          animate={{ y: [0, -3, 0], opacity: [0.7, 1, 0.7] }}
           transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <img
-          src={rdsLetters}
-          alt="Ready Desk Services, LLC"
-          className="absolute pointer-events-none select-none"
-          style={{ width: "260px", top: "42px", left: "0" }}
         />
       </a>
       <motion.div
