@@ -127,7 +127,7 @@ export default function LandingPage() {
                   Ready Desk
                 </div>
                 <div
-                  className="font-libre text-white/95 uppercase tracking-[0.22em] mt-2 whitespace-nowrap pl-[28%]"
+                  className="font-libre text-white/95 uppercase tracking-[0.22em] mt-2 whitespace-nowrap pl-[45%]"
                   style={{ fontSize: "clamp(1rem, 1.8vw, 1.75rem)" }}
                   data-testid="text-hero-services-llc"
                 >
