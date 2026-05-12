@@ -1,4 +1,5 @@
-import logoImg from "@assets/Logo_website_2026.png";
+import rdsLetters from "@assets/rds-letters_1778618606398.png";
+import rdsArch from "@assets/rds-arch_1778618616865.png";
 
 const SITE = "https://readydeskservices.com";
 
@@ -7,12 +8,27 @@ export default function Footer() {
     <footer className="bg-[#3b2318] text-white py-16 px-6 md:px-12 lg:px-20 border-t border-[#c27a4a]/10">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center gap-6 mb-10">
-          <a href={SITE} target="_blank" rel="noopener noreferrer">
+          <a
+            href={SITE}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative block"
+            style={{ width: "260px", height: "190px" }}
+            data-testid="img-footer-logo"
+            aria-label="Ready Desk Services, LLC"
+          >
             <img
-              src={logoImg}
+              src={rdsArch}
+              alt=""
+              aria-hidden="true"
+              className="absolute pointer-events-none select-none"
+              style={{ width: "260px", top: "0px", left: "0" }}
+            />
+            <img
+              src={rdsLetters}
               alt="Ready Desk Services, LLC"
-              className="h-[110px] w-auto object-contain"
-              data-testid="img-footer-logo"
+              className="absolute pointer-events-none select-none"
+              style={{ width: "260px", top: "60px", left: "0" }}
             />
           </a>
 
