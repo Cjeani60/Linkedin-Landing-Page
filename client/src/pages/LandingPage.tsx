@@ -61,7 +61,7 @@ export default function LandingPage() {
         <FloatingOrb className="absolute bottom-[10%] right-[10%] w-[280px] h-[280px] rounded-full bg-[#5c3d2e]/20 blur-[90px]" delay={3} />
         <FloatingOrb className="absolute top-[40%] right-[30%] w-[200px] h-[200px] rounded-full bg-[#c27a4a]/10 blur-[80px]" delay={5} />
 
-        <motion.div style={{ opacity: heroOpacity }} className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-32 pb-20 relative z-10 w-full">
+        <motion.div style={{ opacity: heroOpacity }} className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 pt-44 pb-20 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <motion.div initial="hidden" animate="visible" custom={0} variants={fadeUp}>
@@ -104,9 +104,32 @@ export default function LandingPage() {
               initial={{ opacity: 0, scale: 0.8, rotate: -3 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 1.2, delay: 0.5, ease: [0.25, 0.4, 0.25, 1] }}
-              className="relative hidden lg:flex justify-center items-center"
+              className="relative hidden lg:flex justify-center items-center min-h-[520px]"
+              data-testid="hero-logo-circle"
             >
-              <img src={logoImg} alt="Ready Desk Services" className="relative w-[520px] h-auto object-contain drop-shadow-[0_0_80px_rgba(194,122,74,0.35)]" data-testid="img-hero-logo" />
+              <div className="absolute w-[520px] h-[520px] rounded-full border border-[#c27a4a]/15 animate-pulse-glow"></div>
+              <div className="absolute w-[440px] h-[440px] rounded-full border border-[#5c3d2e]/20 animate-float-slow"></div>
+              <div className="absolute w-[360px] h-[360px] rounded-full bg-gradient-to-br from-[#c27a4a]/10 to-[#5c3d2e]/10 animate-float"></div>
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="relative z-10 text-center"
+              >
+                <div
+                  className="font-script text-white leading-[0.95] whitespace-nowrap drop-shadow-[0_4px_24px_rgba(0,0,0,0.45)]"
+                  style={{ fontSize: "clamp(3.5rem, 6.5vw, 6.5rem)" }}
+                  data-testid="text-hero-ready-desk"
+                >
+                  Ready Desk
+                </div>
+                <div
+                  className="font-libre text-white/95 uppercase tracking-[0.22em] mt-2 whitespace-nowrap"
+                  style={{ fontSize: "clamp(1rem, 1.8vw, 1.75rem)" }}
+                  data-testid="text-hero-services-llc"
+                >
+                  Services, LLC
+                </div>
+              </motion.div>
             </motion.div>
           </div>
 
@@ -504,7 +527,15 @@ export default function LandingPage() {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={2} variants={scaleIn}>
             <div className="bg-white rounded-md p-8 md:p-10 border border-border shadow-sm">
-              <form method="POST" data-netlify="true" name="linkedin-contact" className="space-y-6" data-testid="form-contact">
+              <form
+                method="POST"
+                data-netlify="true"
+                name="linkedin-contact"
+                action="mailto:cj@readydeskservices.com"
+                encType="text/plain"
+                className="space-y-6"
+                data-testid="form-contact"
+              >
                 <input type="hidden" name="form-name" value="linkedin-contact" />
                 <div className="space-y-2">
                   <label className="uppercase text-[10px] font-bold tracking-[0.15em] text-espresso/50">Your Name</label>
@@ -524,13 +555,18 @@ export default function LandingPage() {
                     data-testid="input-message"
                   />
                 </div>
-                <Button
-                  type="submit"
-                  className="w-full bg-[#c27a4a] text-white text-xs font-bold uppercase tracking-[0.15em] py-6"
-                  data-testid="button-submit"
-                >
-                  Send Message
+                <Button asChild className="w-full bg-[#c27a4a] text-white text-xs font-bold uppercase tracking-[0.15em] py-6" data-testid="button-submit-email">
+                  <a href="mailto:cj@readydeskservices.com?subject=New%20Inquiry%20from%20Landing%20Page">Send a Message</a>
                 </Button>
+                <a
+                  href="https://calendly.com/cj-readydeskservices/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-center text-xs font-bold uppercase tracking-[0.15em] text-[#c27a4a] hover:text-[#5c3d2e] transition-colors pt-1"
+                  data-testid="link-form-booking"
+                >
+                  or Book a Free Consultation &rarr;
+                </a>
               </form>
             </div>
           </motion.div>

@@ -83,6 +83,8 @@ export default {
         },
       },
       fontFamily: {
+        'libre': ['"Libre Baskerville"', 'Georgia', 'serif'],
+        'script': ['"Brittany Signature"', 'cursive'],
         sans: ["var(--font-sans)"],
         serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
