@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import logoImg from "@assets/Logo_1771363129441.png";
+import logoImg from "@assets/Logo_website_2026.png";
 import cardVisualImg from "@/assets/images/card-visual-storytelling.jpg";
 import cardDeviceImg from "@/assets/images/card-device-perfect.jpg";
 import cardArchImg from "@/assets/images/card-modern-architecture.jpg";
@@ -109,7 +109,7 @@ export default function LandingPage() {
               <div className="absolute w-[500px] h-[500px] rounded-full border border-[#c27a4a]/10 animate-pulse-glow"></div>
               <div className="absolute w-[420px] h-[420px] rounded-full border border-[#5c3d2e]/15 animate-float-slow"></div>
               <div className="absolute w-[340px] h-[340px] rounded-full bg-gradient-to-br from-[#c27a4a]/8 to-[#5c3d2e]/8 animate-float"></div>
-              <img src={logoImg} alt="Ready Desk Services" className="relative w-[380px] h-[380px] object-contain drop-shadow-[0_0_100px_rgba(194,122,74,0.5)]" data-testid="img-hero-logo" />
+              <img src={logoImg} alt="Ready Desk Services" className="relative w-[480px] h-auto object-contain drop-shadow-[0_0_100px_rgba(194,122,74,0.5)]" data-testid="img-hero-logo" />
             </motion.div>
           </div>
 
@@ -420,7 +420,7 @@ export default function LandingPage() {
                   <div className="absolute w-[220px] h-[220px] rounded-full border border-[#c27a4a]/15 animate-pulse-glow"></div>
                   <div className="absolute w-[185px] h-[185px] rounded-full border border-white/10 animate-float-slow"></div>
                   <div className="absolute w-[150px] h-[150px] rounded-full bg-gradient-to-br from-[#c27a4a]/10 to-[#5c3d2e]/10 animate-float"></div>
-                  <img src={logoImg} alt="RDS" className="relative w-40 h-40 object-contain drop-shadow-[0_0_60px_rgba(194,122,74,0.4)]" />
+                  <img src={logoImg} alt="RDS" className="relative w-56 h-auto object-contain drop-shadow-[0_0_60px_rgba(194,122,74,0.4)]" />
                 </div>
               </div>
               <blockquote className="font-serif-display text-2xl md:text-3xl leading-relaxed mb-8 text-center italic text-white">
