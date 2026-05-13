@@ -27,7 +27,11 @@ export async function registerRoutes(
       try {
         await transporter.sendMail({
           from: `"Ready Desk Services" <${process.env.GMAIL_USER}>`,
+<<<<<<< HEAD
           to: "cj@readydeskservices.com",
+=======
+          to: "reliableparalegalco@gmail.com",
+>>>>>>> 84564cf3c94b6b4e3aef8e882e02993022948ef6
           replyTo: input.email,
           subject: `New Inquiry from ${input.name}`,
           html: `

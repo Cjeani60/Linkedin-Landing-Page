@@ -2,10 +2,20 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Globe, Palette, Zap, CheckCircle2, ArrowRight, ExternalLink, Monitor, Code, Layers, Sparkles, Shield, Clock } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+<<<<<<< HEAD
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import logoImg from "@assets/Logo_website_2026.png";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useCreateInquiry } from "@/hooks/use-inquiries";
+import { insertInquirySchema, type InsertInquiry } from "@shared/schema";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import logoImg from "@assets/Logo_1771363129441.png";
 import cardVisualImg from "@/assets/images/card-visual-storytelling.jpg";
 import cardDeviceImg from "@/assets/images/card-device-perfect.jpg";
 import cardArchImg from "@/assets/images/card-modern-architecture.jpg";
@@ -43,10 +53,20 @@ function FloatingOrb({ className, delay = 0 }: { className: string; delay?: numb
 }
 
 export default function LandingPage() {
+  const createInquiry = useCreateInquiry();
   const heroRef = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const heroY = useTransform(scrollYProgress, [0, 1], [0, 150]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+
+  const form = useForm<InsertInquiry>({
+    resolver: zodResolver(insertInquirySchema),
+    defaultValues: { name: "", email: "", message: "" }
+  });
+
+  const onSubmit = (data: InsertInquiry) => {
+    createInquiry.mutate(data, { onSuccess: () => form.reset() });
+  };
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-terra/20">
@@ -134,6 +154,12 @@ export default function LandingPage() {
                   Services, LLC
                 </div>
               </motion.div>
+              className="relative hidden lg:flex justify-center items-center"
+            >
+              <div className="absolute w-[500px] h-[500px] rounded-full border border-[#c27a4a]/10 animate-pulse-glow"></div>
+              <div className="absolute w-[420px] h-[420px] rounded-full border border-[#5c3d2e]/15 animate-float-slow"></div>
+              <div className="absolute w-[340px] h-[340px] rounded-full bg-gradient-to-br from-[#c27a4a]/8 to-[#5c3d2e]/8 animate-float"></div>
+              <img src={logoImg} alt="Ready Desk Services" className="relative w-[380px] h-[380px] object-contain drop-shadow-[0_0_100px_rgba(194,122,74,0.5)]" data-testid="img-hero-logo" />
             </motion.div>
           </div>
 
@@ -182,7 +208,7 @@ export default function LandingPage() {
           <div className="flex items-center gap-3">
             <Shield className="w-4 h-4 text-white" />
             <span className="text-xs font-bold uppercase tracking-[0.15em] text-white">Paralegal Support</span>
-          </div>
+                      </div>
         </motion.div>
       </div>
 
@@ -319,7 +345,7 @@ export default function LandingPage() {
                   {[
                     { title: "Spark — Tier 1", desc: "A single high-impact page to validate your idea, capture leads, and make a powerful first impression.", price: "From $275" },
                     { title: "Ignite — Tier 2", desc: "A multi-page site with custom branding, mobile-first design, and built-in SEO foundations to compete from day one.", price: "From $375" },
-                    { title: "Blaze — Tier 3", desc: "The complete package: strategy, branding, content, development, and ongoing partnership to dominate your market.", price: "From $700" },
+                    { title: "Blaze — Tier 3", desc: "The complete package: strategy, branding, content, development, and ongoing partnership to dominate your market.", price: "From $700" }
                   ].map((tier, i) => (
                     <motion.div
                       key={i}
@@ -470,7 +496,16 @@ export default function LandingPage() {
               </div>
               <blockquote className="font-serif-display text-2xl md:text-3xl leading-relaxed mb-8 text-center italic text-white">
                 "Two services, one team &mdash; customizable packages built to fit every need."
-              </blockquote>
+              <div className="flex justify-center mb-8">
+                <div className="relative flex justify-center items-center">
+                  <div className="absolute w-[220px] h-[220px] rounded-full border border-[#c27a4a]/15 animate-pulse-glow"></div>
+                  <div className="absolute w-[185px] h-[185px] rounded-full border border-white/10 animate-float-slow"></div>
+                  <div className="absolute w-[150px] h-[150px] rounded-full bg-gradient-to-br from-[#c27a4a]/10 to-[#5c3d2e]/10 animate-float"></div>
+                  <img src={logoImg} alt="RDS" className="relative w-40 h-40 object-contain drop-shadow-[0_0_60px_rgba(194,122,74,0.4)]" />
+                </div>
+              </div>
+              <blockquote className="font-serif-display text-2xl md:text-3xl leading-relaxed mb-8 text-center italic text-white">
+                             </blockquote>
               <div className="text-sm font-bold tracking-[0.15em] uppercase text-[#c27a4a] text-center">Ready Desk Services, LLC</div>
 
               <div className="grid grid-cols-3 gap-6 mt-14 pt-10 border-t border-white/10">
@@ -535,8 +570,7 @@ export default function LandingPage() {
             <div className="w-16 h-[3px] bg-gradient-to-r from-[#c27a4a] to-[#5c3d2e] mb-8 rounded-full"></div>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
               Drop us a line at <a href="mailto:cj@readydeskservices.com" className="text-[#c27a4a] font-semibold hover:underline" data-testid="link-contact-email">cj@readydeskservices.com</a>. We read every message personally and respond with a candid assessment of how we can help &mdash; no bots, no runaround.
-            </p>
-
+              Drop us a line. We read every message personally and respond with a candid assessment of how we can help &mdash; no bots, no runaround.
             <div className="space-y-6">
               <div className="flex gap-4 items-center">
                 <Monitor className="w-5 h-5 text-[#c27a4a]" />
@@ -555,6 +589,7 @@ export default function LandingPage() {
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} custom={2} variants={scaleIn}>
             <div className="bg-white rounded-md p-8 md:p-10 border border-border shadow-sm">
+<<<<<<< HEAD
               <form
                 method="POST"
                 data-netlify="true"
@@ -596,6 +631,71 @@ export default function LandingPage() {
                   or Book a Free Consultation &rarr;
                 </a>
               </form>
+              <Form {...form}>
+                <form
+  method="POST"
+  data-netlify="true"
+  name="linkedin-contact"
+  action="/"
+  className="space-y-6"
+  data-testid="form-contact"
+>
+
+                  <input type="hidden" name="form-name" value="linkedin-contact" />
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="uppercase text-[10px] font-bold tracking-[0.15em] text-espresso/50">Your Name</FormLabel>
+                        <FormControl>
+                          <Input placeholder="Full Name" {...field} className="bg-[#f5ede0]/50 border-border" data-testid="input-name" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="uppercase text-[10px] font-bold tracking-[0.15em] text-espresso/50">Email Address</FormLabel>
+                        <FormControl>
+                          <Input placeholder="you@company.com" {...field} className="bg-[#f5ede0]/50 border-border" data-testid="input-email" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="uppercase text-[10px] font-bold tracking-[0.15em] text-espresso/50">Your Message</FormLabel>
+                        <FormControl>
+                          <Textarea
+                            placeholder="Tell us what you're building, where you're headed, and how we can help..."
+                            className="min-h-[140px] bg-[#f5ede0]/50 border-border resize-none"
+                            {...field}
+                            data-testid="input-message"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <Button
+                    type="submit"
+                    disabled={createInquiry.isPending}
+                    className="w-full bg-[#c27a4a] text-white text-xs font-bold uppercase tracking-[0.15em] py-6"
+                    data-testid="button-submit"
+                  >
+                    {createInquiry.isPending ? "Sending..." : "Send Message"}
+                  </Button>
+                </form>
+              </Form>
             </div>
           </motion.div>
         </div>
