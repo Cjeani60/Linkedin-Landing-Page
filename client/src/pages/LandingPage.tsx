@@ -460,7 +460,7 @@ export default function LandingPage() {
                       Ready Desk
                     </div>
                     <div
-                      className="font-libre text-white uppercase tracking-[0.22em] mt-2 whitespace-nowrap pl-[42%]"
+                      className="font-libre text-white uppercase tracking-[0.22em] mt-3 whitespace-nowrap pl-[42%]"
                       style={{ fontSize: "clamp(0.7rem, 1.1vw, 1.05rem)" }}
                     >
                       Services, LLC
