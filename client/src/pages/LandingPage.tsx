@@ -107,9 +107,9 @@ export default function LandingPage() {
               className="relative hidden lg:flex justify-center items-center min-h-[520px]"
               data-testid="hero-logo-circle"
             >
-              <div className="absolute w-[620px] h-[620px] rounded-full border border-[#c27a4a]/15 animate-pulse-glow"></div>
-              <div className="absolute w-[530px] h-[530px] rounded-full border border-[#5c3d2e]/20 animate-float-slow"></div>
-              <div className="absolute w-[440px] h-[440px] rounded-full bg-gradient-to-br from-[#c27a4a]/10 to-[#5c3d2e]/10 animate-float"></div>
+              <div className="absolute w-[620px] h-[620px] rounded-full border border-[#c27a4a]/25 animate-pulse-glow"></div>
+              <div className="absolute w-[530px] h-[530px] rounded-full border border-[#e8a76e]/25 animate-float-slow"></div>
+              <div className="absolute w-[440px] h-[440px] rounded-full bg-gradient-to-br from-[#c27a4a]/40 via-[#d4925e]/30 to-[#5c3d2e]/40 animate-float shadow-[0_0_80px_rgba(194,122,74,0.35)]"></div>
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
@@ -118,7 +118,7 @@ export default function LandingPage() {
                 <div
                   className="font-script text-white leading-[0.95] whitespace-nowrap drop-shadow-[0_4px_24px_rgba(0,0,0,0.45)]"
                   style={{
-                    fontSize: "clamp(4rem, 7.5vw, 7.5rem)",
+                    fontSize: "clamp(3rem, 5.5vw, 5.5rem)",
                     WebkitTextStroke: "1.5px #ffffff",
                     textShadow: "0 0 1px rgba(255,255,255,0.6)",
                   }}
